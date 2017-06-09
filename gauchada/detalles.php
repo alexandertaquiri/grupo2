@@ -21,10 +21,10 @@
 				<?php
                 echo"<h2> titulo: ".$row['titulo']."</h2>";
 				echo"<h2> ciudad: ".$row['ciudad']."</h2>";
-				echo"<h2> telefono: ".$row['telefono']."</h2>";
+				
 				echo"<h2> descripcion: ".$row['descripcion']."</h2>";
 				echo"<h2> publicado por: ".$row['nombre']." </h2>";
-				echo"<h2> Email: ".$row['email']." </h2>";
+				
 				
 				//mysqli_free_result($result);
 				//mysqli_close($link);
