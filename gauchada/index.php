@@ -10,6 +10,9 @@
 
 <head>
 	<title> Una gauchada </title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css"></style>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
 </head>
 
 <body>
@@ -27,14 +30,14 @@
 				include ("menu.php");
 				include ("conexion.php");
 				$link = conectar();
-				$query="SELECT idPublicacion, ciudad,imagen, titulo, descripcion  FROM publicacion 
-				";
+				$query="SELECT idPublicacion,ciudad,imagen, titulo, descripcion  FROM publicacion 
+				 ORDER BY publicacion.fecha DESC";
 				$result =mysqli_query($link,$query);
 				$num=mysqli_num_rows($result);
 				if($num == 0){
 					echo"<h4>NO SE ENCONTRARON RESULTADOS</h4>";
 				}
-				
+				else{
  
 				?>
 					<table>
@@ -64,7 +67,7 @@
       							echo"<td width=200>".$row['ciudad']."</td>";
       							echo"<td width=400>".$row['descripcion'],"</td>";
       							
-      							echo"<td width=300><img src=mostrarImagen.php?idPublicacion=".$row['idPublicacion']."></td>";
+      							echo"<td  width=300><img src=mostrarImagen.php?idPublicacion=".$row['idPublicacion']."></td>";
       							
       						}
       					
@@ -73,6 +76,7 @@
 		
 		</div>
 		<?php
+	}
 			 include("footer.php");
 		?>
 	</div>
