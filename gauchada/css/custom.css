@@ -1,3 +1,15 @@
+input[readonly] {
+    background-color:white !important;
+}
+
+.space-down {
+    margin-bottom: 0.5em;
+}
+
+.hide-button {
+    display:none !important;
+    width: 1px;
+}
 
 .glory {
     font-family: 'Gloria Hallelujah', cursive;

@@ -19,9 +19,6 @@
     </head>
     <body>
         <div class="container">
-            <!-- Trigger the modal with a button 
-            <button id="openModal" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Crear Gauchada</button>-->
-            <!-- Modal -->
             <div class="modal fade" id="myModal" data-backdrop="static" data-keyboard="false" role="dialog">
                 <div class="modal-dialog">
                     <!-- Modal content-->
@@ -48,7 +45,7 @@
                                                 <div class="col-md-12">
                                                     <div class="form-group">
                                                         <div><label for="image"><span class="glyphicon glyphicon-picture"></span> Imagen</label></div>
-                                                        <input name="image" accept=".jpg,.jpeg,.png" type="file" style="display:none; width: 1px;" onchange="$(this).parent().find('small').html($(this).val().replace('C:\\fakepath\\', ''))"  />
+                                                        <input name="image" accept=".jpg,.jpeg,.png" type="file" class="hide-button" onchange="$(this).parent().find('small').html($(this).val().replace('C:\\fakepath\\', ''))"  />
                                                         <input class="btn btn-default" type="button" value="Examinar" onclick="$(this).parent().find('input[type=file]').click();"/>
                                                         <small id="fileHelp" class="form-text text-muted">Por favor, ingrese una imagen.</small>
                                                     </div>
@@ -152,6 +149,6 @@
         <script src="js/jquery.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/bootstrapValidator.min.js"></script>
-        <script src="js/validate.js"></script>
+        <script src="js/postGauchadaForm.js"></script>
     </body>
 </html>

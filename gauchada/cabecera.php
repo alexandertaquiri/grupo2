@@ -31,7 +31,7 @@
       	           	 		<nav>
 					        	<ul>".$elm."
 					        		<li>
-					        			<a href=comprarcredito.php> COMPRAR CREDITO</a>
+					        			<a href=buyPointsForm.php> COMPRAR CREDITO</a>
 
 					        		</li>
 					        		<li>
