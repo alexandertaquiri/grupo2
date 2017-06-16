@@ -1,7 +1,3 @@
-<?php
-    include("connectDataBase.php");
-    $conn = connect();
-?>
 <!DOCTYPE html>
 <html class="background">
     <head>
@@ -30,30 +26,19 @@
                         <div class="modal-body bg-body">
                             <div class="panel panel-default">
                                 <div class="panel-body">
-                                    <form id="gauchada" method="POST" action="submitPostGauchada.php" enctype="multipart/form-data">
+                                    <form id="gauchada" method="POST" enctype="multipart/form-data">
                                         <div class="controls">
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="form-group">
                                                         <label class="control-label" for="title"><span class="glyphicon glyphicon-thumbs-up"></span> Título *</label>
-                                                            <input id="title" type="text" name="title" class="form-control" placeholder="Por favor, escriba el título de la gauchada *" required="">
+                                                            <input id="title" type="text" name="title" class="form-control" placeholder="Escriba el título de la gauchada. *" required="">
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <div class="row">
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <div><label for="image"><span class="glyphicon glyphicon-picture"></span> Imagen</label></div>
-                                                        <input name="image" accept=".jpg,.jpeg,.png" type="file" class="hide-button" onchange="$(this).parent().find('small').html($(this).val().replace('C:\\fakepath\\', ''))"  />
-                                                        <input class="btn btn-default" type="button" value="Examinar" onclick="$(this).parent().find('input[type=file]').click();"/>
-                                                        <small id="fileHelp" class="form-text text-muted">Por favor, ingrese una imagen.</small>
-                                                    </div>
-                                               </div> 
-                                            </div> 
-
-                                            <div class="row">
-                                                <div class="col-md-12">
+                                                <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label for="city"><span class="glyphicon glyphicon-globe"></span> Ciudad *</label>
                                                         <div>
@@ -85,28 +70,29 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <div><label for="image"><span class="glyphicon glyphicon-picture"></span> Imagen</label></div>
+                                                        <input name="image" accept=".jpg,.jpeg,.png" type="file" class="hide-button" onchange="$(this).parent().find('small').html($(this).val().replace('C:\\fakepath\\', ''))">
+                                                        <input class="btn btn-default" type="button" value="Examinar" onclick="$(this).parent().find('input[type=file]').click();"/>
+                                                        <small id="fileHelp" class="form-text text-muted">Ingrese una imagen.</small>
+                                                    </div>
+                                                </div>
+                                            </div> 
 
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label for="exp"><span class="glyphicon glyphicon-calendar"></span> Caducidad</label>
-                                                        <input id="exp" name="exp" type="date" max="2018-12-30" class="form-control" placeholder="Por favor, ingrese la fecha de caducidad *" required>
+                                                        <label for="cat"><span class="glyphicon glyphicon-tags"></span>  Categoría *</label>
+                                                        <div class="categoria">
+                                                            <select class="form-control" id="cat" name="cat"></select>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label for="cat"><span class="glyphicon glyphicon-tags"></span>  Categoría *</label>
-                                                        <div>
-                                                            <select class="form-control" id="cat" name="cat">
-                                                            <?php
-                                                                  $result=mysqli_query($conn,"SELECT * FROM categoria");
-                                                                  while($row=mysqli_fetch_array($result)){
-                                                                      echo"<option value=".$row['idCategoria'].">".$row['nombre']."</option>";      
-                                                                } 
-                                                            ?>
-                                                            </select>
-                                                        </div>
+                                                        <label for="exp"><span class="glyphicon glyphicon-calendar"></span> Caducidad</label>
+                                                        <input id="exp" name="exp" type="date" max="2018-12-30" class="form-control" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -115,7 +101,7 @@
                                                 <div class="col-md-12">
                                                     <div class="form-group">
                                                         <label for="message"><span class="glyphicon glyphicon-align-justify"></span> Descripción *</label>
-                                                        <textarea id="message" name="message" class="form-control" placeholder="Por favor, cuéntenos acerca de la gauchada *" rows="4" required=""></textarea>
+                                                        <textarea id="message" name="message" class="form-control" placeholder="Cuéntenos acerca de la gauchada. *" rows="4" required=""></textarea>
                                                     </div>
                                                 </div>
 

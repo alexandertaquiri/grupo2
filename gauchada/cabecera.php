@@ -59,6 +59,6 @@
 	<script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrapValidator.min.js"></script>
-    <script src="js/validate.js"></script>
+    <script src="js/postGauchadaForm.js"></script>
 </body>
 </html>

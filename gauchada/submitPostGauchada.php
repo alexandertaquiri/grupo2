@@ -22,6 +22,5 @@
     if ($am <= 0) {$am=0;}
 	else {$am=$am-1;}
     mysqli_query($con,"UPDATE credito SET monto='$am' WHERE idUsuario='$usId'");  
-    //header("Location:index.php");
-    echo "<script>window.location.href = 'index.php'; alert('Su publicación se realizó exitosamente'); </script>";
+
 ?>

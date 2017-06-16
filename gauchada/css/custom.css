@@ -39,7 +39,7 @@ label {
     filter: alpha(opacity=90);
 }
 
-.background{ 
+.background { 
     background-image: url('../imgs/mate2.jpg');
     height: 100%; 
     /* Center and scale the image nicely*/
