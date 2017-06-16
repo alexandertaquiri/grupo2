@@ -12,27 +12,28 @@
 </head>
 
 <body>
-	
 	<div id="header">
 		<?php
-
 			if(isset($_SESSION['estado'])){
       	  		 if($_SESSION['estado']=="logeado"){
 
-			if(hasCredit()) {
-				$elm="<li><a href='postGauchadaForm.php'><strong>+</strong> PUBLICAR</a></li>";
-			} else {
-				$elm="<li><a id='msg' href=''><strong>+</strong> PUBLICAR</a></li>";
-			}
-      	  			 echo"
+						if(hasCredit()) {
+							$elm="<li><a href='postGauchadaForm.php'><strong>+</strong> PUBLICAR</a></li>";
+						} else {
+							$elm="<li><a id='msg' href=''><strong>+</strong> PUBLICAR</a></li>";
+						}
+			      	  			 echo"
 						<h3><a href=index.php><img id=inicio src=imgs/logo2.jpg></a> | 
       	           	 Hola ".$_SESSION['nombre']." ! | <a href=salir.php>cerrar sesion</a></h3>";
       	           	 echo"
       	           	 		<nav>
-					        	<ul>".$elm."
+					        	<ul>
+					        		<li>
+					        			<a href=userProfile.php> MI PERFIL </a>
+					        		</li>
+					        		".$elm."
 					        		<li>
 					        			<a href=buyPointsForm.php> COMPRAR CREDITO</a>
-
 					        		</li>
 					        		<li>
 					        			<a>CONFIGURACION</a>
