@@ -27,7 +27,7 @@
 		<div id="favores">
 			<?php
 				include ("menu.php");
-				include ("conexion.php");
+				include_once("conexion.php");
 				$link = conectar();
 				$query="SELECT idPublicacion,ciudad,imagen, titulo, descripcion  FROM publicacion 
 				 ORDER BY publicacion.idPublicacion DESC";
