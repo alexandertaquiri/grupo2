@@ -3,15 +3,13 @@
 	if(isset($_GET['msj'])){
   		 $mensaje= $_GET['msj'];
 //
+
    	if($mensaje="2")
   		 echo"<script> alert ('DEBE ESTAR REGISTRADO PARA ACCEDER')</script>"; 
 }?>
 
 <head>
 	<title> Una gauchada </title>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <style type="text/css"></style>
-    <link rel="stylesheet" type="text/css" href="css/estilos.css">
 </head>
 
 <body>
@@ -28,16 +26,18 @@
 			<?php
 				include ("menu.php");
 				include_once("conexion.php");
+				include("funciones.php");
+				$filtrar=filtrarpor();//es una funcion declarada en el archivo funciones y lo concateno en la consulta principal 
 				$link = conectar();
-				$query="SELECT idPublicacion,ciudad,imagen, titulo, descripcion  FROM publicacion 
-				 ORDER BY publicacion.idPublicacion DESC";
+				$orderby="ORDER BY publicacion.idPublicacion DESC";
+				$query="SELECT idPublicacion, ciudad,imagen, titulo, descripcion  FROM publicacion ".$filtrar."".$orderby;
 				$result =mysqli_query($link,$query);
 				$num=mysqli_num_rows($result);
-				if($num == 0){
+				if($num == 0){//no se dibuja la tabla y me da como resultado este mensaje
 					echo"<h4>NO SE ENCONTRARON RESULTADOS</h4>";
 				}
-				else{
- 
+				
+                else{
 				?>
 					<table>
  						<tr>
@@ -56,28 +56,31 @@
       	                               		echo"<tr><td width=300><h4><a href=detalles.php?fila=".$row['idPublicacion'].">".$row['titulo']."</a></h4></td>";
       	  			
 										}
+
 									}
 									else{echo"<tr><td width=300>".$row['titulo']."</td>";}*/
+
+
 		
       							echo"<tr><td width=300><h4><a href=detalles.php?fila=".$row['idPublicacion'].">".$row['titulo']."</a></h4></td>";
       							echo"<td width=200>".$row['ciudad']."</td>";
       							echo"<td width=400>".$row['descripcion'],"</td>";
       							
-      							echo"<td  width=300><img src=";
-								if (($row['imagen']) == "") {
-								echo "./imgs/def.jpg";
-								}else{
-								echo "mostrarImagen.php?idPublicacion=".$row['idPublicacion'];
-								}
-								echo "></td>";
+      							//echo"<td width=300><img src=mostrarImagen.php?idPublicacion=".$row['idPublicacion']."></td>";
+      							echo"<td width=300><img src=";
+      								if(($row['imagen'])==""){
+      									echo"./imgs/logo.jpg";
+      								}else echo"mostrarImagen.php?idPublicacion=".$row['idPublicacion'];
+      								echo"></td>";
+      							
       						}
-      					
+      					}
       					?>
+      					
       				</table>	
 		
 		</div>
 		<?php
-	}
 			 include("footer.php");
 		?>
 	</div>
