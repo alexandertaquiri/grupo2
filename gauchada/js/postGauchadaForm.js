@@ -50,16 +50,22 @@ $(document).ready(function() {
             }
         }
     }).on('success.form.bv',function(e) {
-        e.preventDefault();
+        //e.preventDefault();
+        var formData = new FormData(this);
         $.ajax({
-            type: 'post',
+            type: 'POST',
             url: 'submitPostGauchada.php',
-            data: $('#gauchada').serialize(),
-                    success: function () {
-                        alert("Su publicación se realizó exitosamente.");
-                        document.location.href = "index.php";
-                    }
+            data: formData,
+            async: false,
+            success: function (data) {
+                alert("Su publicación se realizó exitosamente.");
+                document.location.href = "index.php";
+            },
+            cache: false,
+            contentType: false,   // by default jQuery sets this to urlencoded string
+            processData: false  // do not process the data as url encoded params
         });
+        return false;
     });
 
     function reset_form () {
