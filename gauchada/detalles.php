@@ -1,5 +1,6 @@
 <html lang="es">
 	<body>
+	<head><link rel="stylesheet" type="text/css" href="css/estilos.css"></head>
 		<?php
 		
             include("clases.php");
@@ -18,7 +19,7 @@
 				 	//echo "<img id=imagen src=mostrarImagen.php?idPublicacion=".$row['idPublicacion']. " >";;
 				 	echo"<img src=";
       								if(($row['imagen'])==""){
-      									echo"./imgs/logo.jpg";
+      									echo"./imgs/def.jpg";
       								}else echo "mostrarImagen.php?idPublicacion=".$row['idPublicacion']."
       							>";         
 
@@ -47,7 +48,7 @@
                      while($row2=mysqli_fetch_array($result2)){
                  
                    // echo" <ol>comentarios";
-                     	echo "<li value=' '>".$row2['comentario']."</li>";
+                     	echo "<li value=' ' class='comentario'>".$row2['comentario']."</li>";
                      //echo"</ol>";
 
                      }
@@ -56,26 +57,25 @@
 				 <div class="wrapper">
       
       
-			     <div id="wrapper">
-			        <form name="formulario2" action="alta_comentario.php" class="login-form"  method="POST" enctype="multipart/form-data">  
-			                <div class="header">
-			               		<h1>Deja tu comentario</h1>
-			               		<textarea type="text" name="comentar"  required="required" rows="4" cols="50"></textarea>
-			           		 </div>
-			           		  
-			    				 <input type="hidden" name="idpublicacion"   value='<?php echo" $id";?>' >
-			     				
-			     				
-			  					 
-			  				  
-			  				  <div class="footer">
-			              		 <input type="submit" name="Ingresar" value="Enviar" class="button" />    
-			                  </div>	 
-							</form>
+				     <div id="wrapper">
+				        <form name="formulario2" action="alta_comentario.php" class="login-form"  method="POST" enctype="multipart/form-data">  
+				                <div class="header">
+				               		<h1>Deja tu comentario</h1>
+				               		<textarea type="text" name="comentar"  required="required" rows="4" cols="50"></textarea>
+				           		 </div>
+				           		  
+				    				 <input type="hidden" name="idpublicacion"   value='<?php echo" $id";?>' >
+				     						  				  
+				  				  <div class="footer">
+				              		 <input type="submit" name="Ingresar" value="Enviar" class="button" />    
+				                  </div>	 
+						</form>
 
-			     </div>      
+				     </div>      
 
-		</div>
+		        </div>
+		    </div>
+		 </div>       
 	
 </body>	
 </html>

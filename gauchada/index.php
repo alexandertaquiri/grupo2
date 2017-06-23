@@ -32,6 +32,7 @@
 				$orderby="ORDER BY publicacion.idPublicacion DESC";
 				$query="SELECT idPublicacion, ciudad,imagen, titulo, descripcion  FROM publicacion ".$filtrar."".$orderby;
 				$result =mysqli_query($link,$query);
+				
 				$num=mysqli_num_rows($result);
 				if($num == 0){//no se dibuja la tabla y me da como resultado este mensaje
 					echo"<h4>NO SE ENCONTRARON RESULTADOS</h4>";
@@ -69,7 +70,7 @@
       							//echo"<td width=300><img src=mostrarImagen.php?idPublicacion=".$row['idPublicacion']."></td>";
       							echo"<td width=300><img src=";
       								if(($row['imagen'])==""){
-      									echo"./imgs/logo.jpg";
+      									echo"./imgs/def.jpg";
       								}else echo"mostrarImagen.php?idPublicacion=".$row['idPublicacion'];
       								echo"></td>";
       							

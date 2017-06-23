@@ -349,3 +349,10 @@ nav ul li div ul{
 nav ul li div ul:last-child {
   border:none;
 }
+.comentario{ 
+  border: solid; 
+  border-radius:10px;
+  padding: 10px; 
+  background-color: white;
+  width:400px; 
+}
