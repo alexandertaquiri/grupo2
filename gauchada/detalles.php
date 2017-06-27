@@ -19,7 +19,7 @@
 				 	//echo "<img id=imagen src=mostrarImagen.php?idPublicacion=".$row['idPublicacion']. " >";;
 				 	echo"<img src=";
       								if(($row['imagen'])==""){
-      									echo"./imgs/def.jpg";
+      									echo"./imgs/logo2.jpg";
       								}else echo "mostrarImagen.php?idPublicacion=".$row['idPublicacion']."
       							>";         
 

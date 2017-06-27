@@ -25,24 +25,34 @@
 			      	  			 echo"
 						<h3><a href=index.php><img id=inicio src=imgs/logo2.jpg></a> | 
       	           	 Hola ".$_SESSION['nombre']." ! | <a href=salir.php>cerrar sesion</a></h3>";
-      	           	 echo"
+      	           	 ?>
+      	           	 <!--echo"-->
       	           	 		<nav>
 					        	<ul>
 					        		<li>
 					        			<a href=userProfile.php> MI PERFIL </a>
 					        		</li>
-					        		".$elm."
+					        		<li><a href="#">MIS PUBLICACIONES</a>
+      
+								  		<div>
+								  			<ul>
+								  				<li><a href="mis_publicaciones.php">VER POSTULACIONES</a></li>
+								  				<li><a href=""></a></li>	
+								                <li><a href=""></a></li>
+								  				
+								  			</ul>
+								  		</div>
+  		                            </li>
+					        		<?php echo "$elm";?>
+
 					        		<li>
 					        			<a href=buyPointsForm.php> COMPRAR CREDITO</a>
-					        		</li>
-					        		<li>
-					        			<a>CONFIGURACION</a>
-					        		</li>
+					        		</li>					        		
 					        	</ul>
-					        </nav>";
-					}
-
-			}
+					        </nav>		
+			<?php
+		}
+	}
 			else{ echo"<h3><a href=index.php><img id=inicio src=imgs/logo2.jpg></a> | <a href=ingresar.php>INGRESAR</a> |<a href=registrar.php> REGISTRARSE</a></h3>";}
 
 
