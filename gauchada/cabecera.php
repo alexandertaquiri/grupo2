@@ -36,7 +36,7 @@
       
 								  		<div>
 								  			<ul>
-								  				<li><a href="mis_publicaciones.php">VER POSTULACIONES</a></li>
+								  				<li><a href="mis_publicaciones.php">VER POSTULANTES</a></li>
 								  				<li><a href=""></a></li>	
 								                <li><a href=""></a></li>
 								  				

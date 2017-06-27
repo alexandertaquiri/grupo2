@@ -68,11 +68,20 @@
       							echo"<td width=400>".$row['descripcion'],"</td>";
       							
       							//echo"<td width=300><img src=mostrarImagen.php?idPublicacion=".$row['idPublicacion']."></td>";
-      							echo"<td width=300><img src=";
-      								if(($row['imagen'])==""){
-      									echo"./imgs/logo2.jpg";
-      								}else echo"mostrarImagen.php?idPublicacion=".$row['idPublicacion'];
-      								echo"></td></tr>";
+      							echo"<td width=250><img src=";
+      							if(($row['imagen'])==""){
+      								echo"./imgs/logo2.jpg";
+      							}else 
+									echo"mostrarImagen.php?idPublicacion=".$row['idPublicacion'];
+									echo"></td>";
+								
+								if (isset ($_SESSION['estado'])){
+									if (isset ($_SESSION['estado'])=="logeado"){
+										$idUser=$_SESSION['id'];
+										$idPub=$row['idPublicacion'];
+										echo"<td width=100> <a href=postulacion.php?idUser=$idUser&idPub=$idPub</a>Postularse</td></tr>";
+									}
+								}
       							
       						}
       					}

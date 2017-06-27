@@ -13,10 +13,10 @@
       	$id=$_SESSION['id'];//id dueño de la publicacion por las dudas si lo uso mas adelante
     
       	$con=conectar();
-      	$result=mysqli_query($con,"SELECT usuarios.nombre,p.idPostulacion,pu.idPublicacion, usuarios.apellido,usuarios.foto,usuarios.idUsuario 
+      	$result=mysqli_query($con,"SELECT usuarios.nombre,postulacion.idPostulacion,postulacion.idPublicacion, usuarios.apellido,usuarios.foto,usuarios.idUsuario 
       		FROM usuarios 
-      		INNER JOIN postulacion p ON p.idUsuario=usuarios.idUsuario
-      		INNER JOIN publicacion pu ON pu.idPublicacion=p.idPublicacion WHERE pu.idPublicacion='$id'");
+      		INNER JOIN postulacion  ON postulacion.idUsuario=usuarios.idUsuario
+      		 WHERE postulacion.idPublicacion='$idp'");
       	
       	?>
 
@@ -27,7 +27,7 @@
 				
 				$num=mysqli_num_rows($result);
 				if($num == 0){//no se dibuja la tabla y me da como resultado este mensaje
-					echo"<h4>NO SE ENCONTRARON RESULTADOS</h4>";
+					echo"<h4>NO HAY POSTULANTES</h4>";
 				}
 				
                         else{
@@ -55,7 +55,7 @@
       									echo"./imgs/def.jpg";
       								}else echo"mostrarImagen2.php?idUsuario=".$row['idUsuario'];
       								echo"></td>";
-                                                echo"<td width=300><a href=elegir.php?fila=".$row['idPostulacion'].">Elegir</a></td></tr>";      
+                                                echo"<td width=300><a href=elegir.php?fila=".$row['idPublicacion']."&postulacion=".$row['idPostulacion'].">Elegir</a></td></tr>";      
     						  }
       					}
       					?>
