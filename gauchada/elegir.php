@@ -20,7 +20,7 @@
         else{
                $result2=mysqli_query($con,"INSERT INTO elige (idPublicacion,idPostulacion)values('$idp','$idpos')");
                echo '<script> alert ("SE ELIGIO A UN POSTULANTE"); </script>';
-               echo '<script> window.location ="ver_postulantes.php?postulacion='.$idpos.'&fila='.$idp.'";</script>';
+               echo '<script> window.location ="mis_publicaciones.php?postulacion='.$idpos.'&fila='.$idp.'";</script>';
                }
          mysqli_close($con);
        
