@@ -9,7 +9,7 @@
       	include("clases.php");
       	include("conexion.php");
 
-
+            
       	$fecha=date("Y-m-d");
       	$caducidad="AND publicacion.caducidad >='$fecha'";
       	
@@ -67,7 +67,15 @@
       									echo"./imgs/logo2.jpg";
       								}else echo"mostrarImagen.php?idPublicacion=".$row['idPublicacion'];
       								echo"></td>";
-                                                echo"<td width=300><a href=ver_postulantes.php?fila=".$row['idPublicacion'].">POSTULANTES</a></td></tr>";      
+                                                 $resul2=mysqli_query($con,"SELECT idPublicacion ,elige.idPostulacion FROM elige  WHERE elige.idPublicacion=".$row['idPublicacion']." ");//verificamos que se a elegido a un apersona
+                                                $row2= mysqli_fetch_array($resul2);
+                                                if(mysqli_num_rows($resul2)>=1){  
+                                                     
+                                                      echo"<td width=300><a href=ver_elegido.php?fila2=".$row2['idPostulacion'].">ESTA PUBLICACION TIENE UN ELEGIDO</a></td></tr>"; 
+                                                      } 
+                                                else {        
+                                                echo"<td width=300><a href=ver_postulantes.php?fila=".$row['idPublicacion'].">POSTULANTES</a></td></tr>";  
+                                                }    
     						  }
       					}
       					?>
