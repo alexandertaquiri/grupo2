@@ -88,7 +88,7 @@
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label for="points"><span class="glyphicon glyphicon-check"></span> Puntos *</label>
+                                                        <label for="points"><span class="glyphicon glyphicon-check"></span> Créditos *</label>
                                                         <input id="points" name="points" type="number" class="form-control" min="1" placeholder="Puntos *" required>
                                                     </div>
                                                 </div>

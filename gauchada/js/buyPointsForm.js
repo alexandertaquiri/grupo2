@@ -1,5 +1,5 @@
 $("#points").change( function(){
-    	var pt = $("#points").val() * 10;
+    	var pt = $("#points").val() * 50;
     	document.getElementById("price").value = pt;
     });
 $(document).ready(function() {

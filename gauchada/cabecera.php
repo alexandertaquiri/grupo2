@@ -31,18 +31,7 @@
 					        	<ul>
 					        		<li>
 					        			<a href=userProfile.php> MI PERFIL </a>
-					        		</li>
-					        		<li><a href="#">MIS PUBLICACIONES</a>
-      
-								  		<div>
-								  			<ul>
-								  				<li><a href="mis_publicaciones.php">VER POSTULANTES</a></li>
-								  				<li><a href=""></a></li>	
-								                <li><a href=""></a></li>
-								  				
-								  			</ul>
-								  		</div>
-  		                            </li>
+
 					        		<?php echo "$elm";?>
 
 					        		<li>

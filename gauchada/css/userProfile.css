@@ -1,0 +1,93 @@
+input, select[readonly] {
+    background-color:white !important;
+}
+
+.top-space{
+    margin-top: 50px;
+}
+
+.left-space {
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+.bg {
+    background: url('../imgs/rail.jpg')no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.panel {
+    background-color: transparent;
+    border: none;
+}
+
+.vertical {
+    background-color: #222;
+    padding-right: 0px;
+}
+
+.thmb {
+    border-radius: 0px;
+    border: none;
+    padding: 30px;
+}
+
+.glory {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 1.5em;
+    color: white;
+}
+
+.panel-heading {
+    font-family: 'Gloria Hallelujah';
+    font-size: 2em;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.badge-notify{
+   background:orange;
+   position:relative;
+   top: -10px;
+   left: -5px;
+   font-size: 0.5em;
+}
+
+html, body {
+    height: 100%;
+}
+
+label {
+    font-size: 1.2em;
+    text-decoration: underline;
+}
+
+a {
+    color: white;
+    font-weight: bold;
+}
+
+p {
+    margin-top: 10px;
+}
+
+nav {
+    border-color: transparent !important;
+}
+
+.well {
+    border: none;
+    background-color: #222;
+}
+
+#pic {
+    display: inline-block !important;
+}
+
+#logo {
+    height: 100%
+}

@@ -18,7 +18,7 @@
  	//guardo el resultado de la consulta
 
 	$resultado=mysqli_query($bd,$consulta);
-	
+
 	$filas=$resultado->num_rows;			
 	
 	//var_dump($filas);

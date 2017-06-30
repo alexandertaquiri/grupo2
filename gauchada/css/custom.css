@@ -34,11 +34,6 @@ label {
     font-size: 30px;
 }
 
-.modal-content,.form {
-    opacity: 0.85;
-    filter: alpha(opacity=90);
-}
-
 .background { 
     background-image: url('../imgs/mate2.jpg');
     height: 100%; 
