@@ -13,12 +13,12 @@
 	$bd=conectar();
 	
 	//averiguar si el usuario trata de postularse a su propia publicacion
-	$consulta0 = mysqli_query($bd,"SELECT idUsuario FROM publicacion WHERE idPublicacion='$idPub'");
+	$consulta = "SELECT idUsuario FROM publicacion WHERE idPublicacion='$idPub'";
 
 	$resultado=mysqli_query($bd,$consulta);
 
 	$filas=$resultado->num_rows;
-	$a=mysqli_fetch_array($consulta0);
+	$a=mysqli_fetch_array($resultado);
 	
 	//idUsuario publicacion actual
 	if($a['idUsuario']==$idUser){

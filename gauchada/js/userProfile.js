@@ -23,12 +23,17 @@ $(document).ready(function() {
 	var xhr = new XMLHttpRequest();
 	xhr.onreadystatechange = function(){
 	    if (this.readyState == 4 && this.status == 200){
-	        console.log(this.response, typeof this.response);
-	        var img = document.getElementById('pic');
-	        var url = window.URL || window.webkitURL;
-	        var binaryData = [];
-			binaryData.push(this.response);
-	        img.src = url.createObjectURL(new Blob(binaryData, {type: "application/zip"}));
+	        console.log(this.response.size, typeof this.response);
+	        if (this.response.size == 0) {
+	        	$("#pic").attr("src", "./imgs/def.jpg");
+	        }
+	        else {
+		        var img = document.getElementById('pic');
+		        var url = window.URL || window.webkitURL;
+		        var binaryData = [];
+				binaryData.push(this.response);
+		        img.src = url.createObjectURL(new Blob(binaryData, {type: "application/zip"}));
+		    }
 	    }
 	}
 	xhr.open('POST', 'getUserPicture.php', true);

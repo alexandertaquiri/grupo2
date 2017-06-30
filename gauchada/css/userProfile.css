@@ -36,9 +36,10 @@ input, select[readonly] {
 }
 
 .glory {
-    font-family: 'Gloria Hallelujah', cursive;
-    font-size: 1.5em;
+    font-family: 'Gloria Hallelujah';
+    font-size: 1.8em;
     color: white;
+    font-weight: 900;
 }
 
 .panel-heading {

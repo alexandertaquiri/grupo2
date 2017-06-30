@@ -46,9 +46,9 @@
                 <div class="vertical col-md-3">
                     <nav class="navbar navbar-inverse text-center">
                         <div class="col-md-12">
-                            <div class="thmb text-center">
-                                <img id="pic" src="" class="img-responsive img-circle" alt="Avatar">
-                                <p class="glory">User</p>
+                            <p class="glory">User</p>
+                            <div class="thmb">
+                                <img id="pic" src="" class="img-responsive" alt="Avatar">
                             </div>
                         </div>
                         <div class="col-md-12">
