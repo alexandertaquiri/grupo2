@@ -37,7 +37,7 @@
 								  		<div>
 								  			<ul>
 								  				<li><a href="mis_publicaciones.php">VER POSTULANTES</a></li>
-								  				<li><a href=""></a></li>	
+								  				<li><a href="misElegidos.php">CALIFICAR</a></li>
 								                <li><a href=""></a></li>
 								  				
 								  			</ul>

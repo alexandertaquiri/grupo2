@@ -11,7 +11,7 @@
 <head>
 	<title> Una gauchada </title>
 </head>
-
+	
 <body>
 	
 	<?php
@@ -24,20 +24,15 @@
 	<div id="container">
 		<div id="favores">
 			<?php
-			     //SELECT publicacion.idPublicacion, ciudad,imagen, titulo, descripcion  FROM publicacion
-				//WHERE publicacion.idPublicacion NOT IN (SELECT elige.idPublicacion FROM elige WHERE idPublicacion='1')
 				include ("menu.php");
 				include_once("conexion.php");
 				include("funciones.php");
-				//$elige="AND elige.idPublicacion != publicacion.idPublicacion";
-				$elige="NOT IN (SELECT elige.idPublicacion FROM elige WHERE elige.idPublicacion=publicacion.idPublicacion)";
 				$filtrar=filtrarpor();//es una funcion declarada en el archivo funciones y lo concateno en la consulta principal 
 				$link = conectar();
 				$orderby="ORDER BY publicacion.idPublicacion DESC";
-				$query="SELECT publicacion.idPublicacion, ciudad,imagen, titulo, descripcion  FROM publicacion
-				WHERE publicacion.idPublicacion NOT IN (SELECT elige.idPublicacion FROM elige WHERE elige.idPublicacion=publicacion.idPublicacion)".$filtrar."".$orderby;
+				$query="SELECT idPublicacion, ciudad,imagen, titulo, descripcion  FROM publicacion ".$filtrar."".$orderby;
 				$result =mysqli_query($link,$query);
-				//var_dump($query);//para verificar si la consulta esta bien en el query
+				
 				$num=mysqli_num_rows($result);
 				if($num == 0){//no se dibuja la tabla y me da como resultado este mensaje
 					echo"<h4>NO SE ENCONTRARON RESULTADOS</h4>";
@@ -79,12 +74,17 @@
       							}else 
 									echo"mostrarImagen.php?idPublicacion=".$row['idPublicacion'];
 									echo"></td>";
-								
+									
+								//Link postularse
 								if (isset ($_SESSION['estado'])){
 									if (isset ($_SESSION['estado'])=="logeado"){
 										$idUser=$_SESSION['id'];
 										$idPub=$row['idPublicacion'];
-										echo"<td width=100> <a href=postulacion.php?idUser=$idUser&idPub=$idPub</a>Postularse</td></tr>";
+										?>
+											<td><button type="button" class="btn btn-info" onClick="location.href='postulacion.php?idUser=<?php echo $idUser; ?>&idPub=<?php echo $idPub;?>' " > Postularse </button></td>
+										<?php
+										
+										//echo"<td width=100> <a href= </a>Postularse</td></tr>";
 									}
 								}
       							

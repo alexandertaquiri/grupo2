@@ -11,7 +11,6 @@
       	$idp=$_GET['fila'];//idp es de idPublicacion;
       	
       	$id=$_SESSION['id'];//id dueño de la publicacion por las dudas si lo uso mas adelante
-             //pero no usar para la consulta ya que es de la session me va a trae siempre al mismo que esta en la session
     
       	$con=conectar();
       	$result=mysqli_query($con,"SELECT usuarios.nombre,postulacion.idPostulacion,postulacion.idPublicacion, usuarios.apellido,usuarios.foto,usuarios.idUsuario 
@@ -56,25 +55,7 @@
       									echo"./imgs/def.jpg";
       								}else echo"mostrarImagen2.php?idUsuario=".$row['idUsuario'];
       								echo"></td>";
-                                                 //si esta elegido para la gauchada poner un cartel de elegido
-                                                 $resul2=mysqli_query($con,"SELECT idPublicacion  FROM elige  WHERE idPostulacion=".$row['idPostulacion']." ");//verificamos si hay un mail igual
-
-                                                if(mysqli_num_rows($resul2)>=1){  
-
-                                                      echo"<td width=300>este usuario fue elegido</td></tr>"; 
-                                                } 
-
-
-                                                else{
-                                                      echo"<td width=300><a href=elegir.php?fila=".$row['idPublicacion']."&postulacion=".$row['idPostulacion'].">Elegir</a></td></tr>"; 
-                                                       
-                                                }
-                                               
-
-
-
-
-
+                                                echo"<td width=300><a href=elegir.php?fila=".$row['idPublicacion']."&postulacion=".$row['idPostulacion'].">Elegir</a></td></tr>";      
     						  }
       					}
       					?>

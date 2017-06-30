@@ -17,7 +17,7 @@ function filtrarPor(){
     $filtrar2="AND publicacion.idCategoria = '$_GET[categorias]'";
   }
   
-  $caducidad="AND publicacion.caducidad >='$fecha'";
+  $caducidad="WHERE publicacion.caducidad >='$fecha'";
   $buscar=busqueda();
   $filtrar=$caducidad."".$filtrar."".$filtrar2."".$buscar;
   return $filtrar;

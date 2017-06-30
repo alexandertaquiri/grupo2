@@ -11,8 +11,6 @@ $link=conectar();
 if(isset($_SESSION['estado'])){
     if($_SESSION['estado']=="logeado"){
       	 $iduser=$_SESSION['id']; //id esta definido en la clase//
-         $nombre=$_SESSION['nombre'];
-         $comenta=$nombre.": ".$comenta;
          $sql = "INSERT INTO comenta (idPublicacion,comentario,idUsuario) values ('$id','$comenta','$iduser')";
          $result = mysqli_query($link, $sql);
           echo '<script> alert ("SU COMENTARIO FUE EXITOSAMENTE REALIZADO"); </script>';

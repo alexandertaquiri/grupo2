@@ -8,7 +8,6 @@
 	      include("cabecera.php");
       	include("clases.php");
       	include("conexion.php");
-
             
       	$fecha=date("Y-m-d");
       	$caducidad="AND publicacion.caducidad >='$fecha'";
@@ -51,11 +50,8 @@
       	                               		echo"<tr><td width=300><h4><a href=detalles.php?fila=".$row['idPublicacion'].">".$row['titulo']."</a></h4></td>";
       	  			
 										}
-
 									}
 									else{echo"<tr><td width=300>".$row['titulo']."</td>";}*/
-
-
 		
       							echo"<tr><td width=300>".$row['titulo']."</td>";
       							echo"<td width=200>".$row['ciudad']."</td>";
