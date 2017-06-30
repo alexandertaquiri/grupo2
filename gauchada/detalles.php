@@ -1,5 +1,5 @@
 <html lang="es">
-	<body id="ingresar">
+	<body>
 	<head><link rel="stylesheet" type="text/css" href="css/estilos.css"></head>
 		<?php
 		
