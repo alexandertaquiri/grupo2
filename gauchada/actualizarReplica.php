@@ -13,6 +13,6 @@
 		//cierro la conexion con la base de datos
 
 	echo "<script> alert('Replica enviada!') </script>";
-	echo "<script>location.href='/gauchada/misElegidos.php'</script>";
+	echo "<script>location.href='/gauchada/misCalificaciones.php'</script>";
 
 ?>

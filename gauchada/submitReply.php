@@ -4,6 +4,7 @@
     $con=conectar();
     $idUser = $_POST['idUsuario'];
     $idPub = $_POST['idPublicacion'];
+	$id = $_GET['fila'];
     //averiguar si el usuario trata de postularse a su propia publicacion
     $consulta = "SELECT * FROM comenta WHERE idPublicacion='$idPub'";
 
@@ -14,5 +15,5 @@
 
     mysqli_query($con, "INSERT INTO comenta (respuesta) VALUES ('$resp')");
     echo "<script> alert('Respuesta enviada correctamente.') </script>";
-    echo "<script>location.href='/gauchada/detalles.php'</script>";            
+    echo "<script>location.href='detalles.php?fila='.$id.' '</script>";            
 ?>
