@@ -26,9 +26,9 @@ function validareg()
 					return false;
 		 	 }
 		  else{
-		  		 if ((document.formulario.telefono.value.length == 0) || (!patron.test(document.formulario.telefono.value)))
+		  		 if (document.formulario.telefono.value.length == 0)
 		  			{
-				       	alert("INGRESE UN TELEFONO VALIDO ¡EXACTAMENTE 9 DIGITOS!");
+				       	alert("INGRESE UN TELEFONO VALIDO");
 				    	document.formulario.telefono.focus();
 				       	//sino se cumple la condicion
 				      	return false;
