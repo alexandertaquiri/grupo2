@@ -73,7 +73,7 @@
 									<td><?php echo "$row[titulo]"?></td>
 									<td><?php echo "$row[nombre]"?></td>
 								<?php
-								//si hay comentario
+								//Si no tiene calificacion ni comentario, mostrar botones calificacion
 								if($calificado[0]==NULL && $comentario[0]==NULL && $replica[0]==NULL){
 								?>
 									<td>
@@ -96,24 +96,9 @@
                                     </tr>
 									
 								<?php
-								}else if($calificado[0]!=NULL && $comentario[0]!=NULL && $replica[0]==NULL){
-										//si hay comentario, pero falta la replica
-									?>
-										<td><?php echo "$row[calificacion]"?></td>
-										<td><?php echo "$row[comentario]"?></td>
-										<td><button type="button" class="btn btn-info" onClick="location.href='replicarCalificacion.php?idPostulacion=<?php echo $idPostulacion; ?>' " > Responder </button></td>
-										
-											<td> 
-										<?php echo"<img src=";
-										if(($row['foto'])==""){
-											echo"./imgs/logo2.jpg";
-										}else echo"mostrarImagen2.php?idUsuario=".$row['idUsuario'];
-										echo">"
-										?></td>
-										</tr>
-										
-									<?php
-								} else if (($calificado[0]!=NULL && $comentario[0]!=NULL && $replica[0]!=NULL)){
+									
+									//si tiene calificacion, entonces tiene comentario (y tal vez replica, sino queda en blanco)
+								} else{
 										?>
 										<td><?php echo "$row[calificacion]"?></td>
 										<td><?php echo "$row[comentario]"?></td>
