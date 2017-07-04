@@ -4,15 +4,12 @@
     $con=conectar();
     $idUser = $_POST['idUsuario'];
     $idPub = $_POST['idPublicacion'];
-    //averiguar si el usuario trata de postularse a su propia publicacion
-    $consulta = "SELECT * FROM comenta WHERE idPublicacion='$idPub'";
+    $idUs2 = $_POST['idUs2'];
 
-    $resultado=mysqli_query($con,$consulta);
-    $a=mysqli_fetch_array($resultado);
+    $resp = $_POST['reply'];
 
-    $resp = $_POST['coment'];
+    mysqli_query($con,"UPDATE comenta SET respuesta='$resp' WHERE idPublicacion='$idPub' AND idUsuario='$idUs2'");
 
-    mysqli_query($con, "INSERT INTO comenta (respuesta) VALUES ('$resp')");
     echo "<script> alert('Respuesta enviada correctamente.') </script>";
-    echo "<script>location.href='/gauchada/detalles.php'</script>";            
+    echo "<script>location.href='/gauchada/detalles.php?fila=".$idPub."'</script>";         
 ?>

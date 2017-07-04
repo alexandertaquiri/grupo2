@@ -21,7 +21,7 @@
 				<div class="row center-block">
 					<div class="col-md-12">
 						<?php echo"<h1 class='text-center'><strong>".$row['titulo']."</strong></h1>"; ?>
-						<div class="col-md-9">
+						<div class="col-md-8">
 							<?php
 							    
 							 	//echo "<img id=imagen src=mostrarImagen.php?idPublicacion=".$row['idPublicacion']. " >";;
@@ -33,7 +33,7 @@
 
 							?>
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-4">
 							<?php
 							echo"<h3><strong>Ciudad: </strong>".$row['ciudad']."</h3>";
 							echo"<h3><strong>Descripción: </strong> ".$row['descripcion']."</h3>";
@@ -50,46 +50,37 @@
 							 	echo"<h3><strong>Comentarios</strong></h3>";	//echo"<h7>algunos comentarios:".$row2['comentario']."</h7>";
 			                    while($row2=mysqli_fetch_array($result2)){
 			                     	$com =  "<div class='panel panel-default'>
-														<div class='panel-body'>
-							                     			<div class='media col-md-9'>
-															    <div class='media-left'>
-															      
-															    </div>
-															    <div class='media-body'>
-																    <h4 class='media-heading'>".$row2['nombre']." <small><i>30/06/2017</i></small></h4>
-																    <p>".$row2['comentario']."</p>
-															    </div>";
+												<div class='panel-body'>
+							                     	<div class='media col-md-9'>
+														<div class='media-left'>
+														</div>
+													    <div class='media-body'>
+														    <h4 class='media-heading'>".$row2['nombre']." <small><i>30/06/2017</i></small></h4>
+														    <p>".$row2['comentario']."</p>
+													    </div>";
+
 											if ($row2['respuesta']) {
-												$com .= "		<div class='media col-md-9'>
-																		<div class='media-left'>
-																			      
-																		</div>
-																		<div class='media-body'>
-																				    <h4 class='media-heading'>".$row['nombre']." <small><i>30/06/2017</i></small></h4>
-																				    <p>".$row2['respuesta']."</p>
-																		</div>
-																	</div>
-																</div>
-															</div>";
+												$com .= "<div class='media col-md-9'>
+															<div class='media-left'>		      
+															</div>
+															<div class='media-body'>
+															    <h4 class='media-heading'>".$row['nombre']." <small><i>30/06/2017</i></small></h4>
+															    <p>".$row2['respuesta']."</p>
+															</div>
+														</div>
+													</div>";
 											} else {
 												$com .= "</div>";
 											}
-															    
-			                     
-			                     	if (isset($_SESSION['id'])) {
-							 			$userId = $_SESSION['id'];
-				                     	if ($userId == $row['idUsuario']) {
-				                     		$com .= "<form action='replyComment.php' method='POST' enctype='multipart/form-data'>
-                                    				<div class='col-md-2'>
-                                    				<button type='submit' class='btn-sm btn-info'>Responder</button>
-                                    				<input type='hidden' name='idUsuario' value=".$row2['idUsuario']." >
-                                    				<input type='hidden' name='idPublicacion' value=".$row2['idPublicacion']." >
-			                     					</div>
-			                     					</form>";
-					                     				
-				                     	}
-			                     	}
-			                     	echo $com."</div>
+									
+					                     	if (isset($_SESSION['id'])) {
+									 			$userId = $_SESSION['id'];
+						                     	if ($userId == $row['idUsuario']) {
+						                     		$com .= "<a href='replyComment.php?idUsuario=".$id."&idPublicacion=".$row2['idPublicacion']."&idUs2=".$row2['idUsuario']."' class='btn btn-info' role='button'>Responder</a>";
+							                     				
+						                     	}
+					                     	}
+			                     	echo $com.	"</div>
 											</div>";
 			                    }
 
@@ -104,7 +95,7 @@
 										        <form name="formulario2" action="alta_comentario.php" class="login-form"  method="POST" enctype="multipart/form-data">  
 										                <div class="header">
 										               		<h1>Deja tu comentario</h1>
-										               		<textarea type="text" name="comentar"  required="required" rows="4" cols="50"></textarea>
+										               		<textarea type="text" name="comentar" class="form-control" required="required" rows="4" cols="50"></textarea>
 										           		 </div>
 										           		  
 										    				 <input type="hidden" name="idpublicacion"   value='<?php echo" $id";?>' >
