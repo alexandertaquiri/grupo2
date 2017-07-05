@@ -13,7 +13,8 @@
 			$link=conectar();
 			$id = $_GET['fila'];//fila es una variable por parametro que recibe un valor o campo de la base de datos "id publicacion"
 			
-			$result = mysqli_query($link , "SELECT * FROM publicacion INNER JOIN  usuarios ON publicacion.idUsuario=usuarios.idUsuario WHERE idPublicacion=$id ");
+			$result = mysqli_query($link , "SELECT usuarios.idUsuario, publicacion.imagen ,categoria.nombre AS nombre2, publicacion.idPublicacion, usuarios.nombre, titulo, ciudad, descripcion FROM publicacion INNER JOIN  usuarios ON publicacion.idUsuario=usuarios.idUsuario 
+				INNER JOIN  categoria ON categoria.idCategoria=publicacion.idCategoria WHERE idPublicacion=$id ");
 			$row=mysqli_fetch_array($result);
 			
 			?>
@@ -37,6 +38,7 @@
 							<?php
 							echo"<h3><strong>Ciudad: </strong>".$row['ciudad']."</h3>";
 							echo"<h3><strong>Descripción: </strong> ".$row['descripcion']."</h3>";
+							echo"<h3><strong>Categoria: </strong>".$row['nombre2']."</h3>";
 
 							?>
 						</div>

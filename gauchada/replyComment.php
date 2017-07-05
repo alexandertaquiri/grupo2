@@ -8,7 +8,7 @@
 
     $consulta = "SELECT * FROM comenta WHERE idPublicacion='$idPub'";
         
-		$id = $_GET['fila'];
+		//$id = $_GET['fila'];
     $resultado=mysqli_query($con,$consulta);
 
     $a=mysqli_fetch_array($resultado);
