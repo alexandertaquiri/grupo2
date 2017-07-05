@@ -24,6 +24,34 @@
 								WHERE idPostulacion = $idPostulacion";
 		mysqli_query($bd, $actualizaCalificacion);
 		
+		
+		$filaCredito="SELECT credito.monto 
+						FROM credito
+						WHERE idUsuario=$idUser";
+		
+		//por si no existe la fila credito para este usuario
+		if(mysqli_num_rows(mysqli_query($bd, $filaCredito))!=0){
+			//si existe y si el voto fue positivo incremento el monto
+			if($puntaje == '1'){
+				$actualizaCredito="UPDATE credito 
+									SET monto=monto + 1
+									WHERE idUsuario = $idUser";
+				mysqli_query($bd, $actualizaCredito);
+			}
+		
+		}else{
+				//sino la creo
+			if($puntaje == '1')
+				$crearFilaCredito="INSERT IGNORE INTO credito (idCredito, monto, idUsuario) VALUES (NULL, '2', $idUser)";
+				
+				else $crearFilaCredito="INSERT IGNORE INTO credito (idCredito, monto, idUsuario) VALUES (NULL, '1', $idUser)";
+			
+			mysqli_query($bd, $crearFilaCredito);
+			
+		}
+		
+		
+		
 		mysqli_close($bd);
 		//cierro la conexion con la base de datos
 

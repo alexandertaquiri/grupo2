@@ -66,13 +66,14 @@
       								}else echo"mostrarImagen2.php?idUsuario=".$row['idUsuario'];
       								echo"></td>";
                                                  
-                                echo"<td width=300>este usuario fue elegido</td>"; 
+                                echo"<td width=300>este usuario fue elegido</td>";
+								$idUser=$row['idUsuario'];
 								if($calificado[0]==NULL){
 										?>
 										<td width=300>
-											<button type="button" class=b1 onClick="location.href='comentarCalificacion.php?id=<?php echo $id; ?>&puntaje=<?php echo $positivo; ?>&idPostulacion=<?php echo $idp; ?>&calificacion=<?php echo "positivo" ?>' " > <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> </button>
-											<button type="button" class=b2 onClick="location.href='comentarCalificacion.php?id=<?php echo $id; ?>&puntaje=<?php echo $neutral; ?>&idPostulacion=<?php echo $idp; ?>&calificacion=<?php echo "neutral" ?>' " > <span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span> </button> 
-											<button type="button" class=b3 onClick="location.href='comentarCalificacion.php?id=<?php echo $id; ?>&puntaje=<?php echo $negativo; ?>&idPostulacion=<?php echo $idp; ?>&calificacion=<?php echo "negativo" ?>' " > <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> </button>
+											<button type="button" class=b1 onClick="location.href='comentarCalificacion.php?id=<?php echo $idUser; ?>&puntaje=<?php echo $positivo; ?>&idPostulacion=<?php echo $idp; ?>&calificacion=<?php echo "positivo" ?>' " > <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> </button>
+											<button type="button" class=b2 onClick="location.href='comentarCalificacion.php?id=<?php echo $idUser; ?>&puntaje=<?php echo $neutral; ?>&idPostulacion=<?php echo $idp; ?>&calificacion=<?php echo "neutral" ?>' " > <span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span> </button> 
+											<button type="button" class=b3 onClick="location.href='comentarCalificacion.php?id=<?php echo $idUser; ?>&puntaje=<?php echo $negativo; ?>&idPostulacion=<?php echo $idp; ?>&calificacion=<?php echo "negativo" ?>' " > <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> </button>
 										</td>
 										<?php
 										echo"<td width=250>$calificado[comentario]</td>";

@@ -33,13 +33,14 @@
 					        			<a href=userProfile.php> MI PERFIL </a>
 
 					        		</li>
-					        		<li><a href="#">MIS PUBLICACIONES</a>
+					        		<li><a href="mis_publicaciones.php">MIS PUBLICACIONES</a>
       
 								  		<div>
 								  			<ul>
-								  				<li><a href="mis_publicaciones.php">VER POSTULANTES</a></li>
-								  				<li><a href="misElegidos.php">CALIFICAR</a></li>
-								                <li><a href=""></a></li>
+								  				<!-- <li><a href="mis_publicaciones.php">VER POSTULANTES</a></li> -->
+								  				<li><a href="misElegidos.php">MIS CALIFICACIONES DADAS</a></li>
+								                <li><a href="misCalificaciones.php">MIS CALIFICACIONES RECIBIDAS</a></li>
+												<li><a href=" "></a></li>
 								  				
 								  			</ul>
 								  		</div>

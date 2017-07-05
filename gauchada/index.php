@@ -27,10 +27,15 @@
 				include ("menu.php");
 				include_once("conexion.php");
 				include("funciones.php");
+				
 				$filtrar=filtrarpor();//es una funcion declarada en el archivo funciones y lo concateno en la consulta principal 
 				$link = conectar();
 				$orderby="ORDER BY publicacion.idPublicacion DESC";
-				$query="SELECT idPublicacion, ciudad,imagen, titulo, descripcion  FROM publicacion ".$filtrar."".$orderby;
+				$query="SELECT idPublicacion, ciudad,imagen, titulo, descripcion 
+						FROM publicacion
+						WHERE publicacion.idPublicacion NOT IN(SELECT elige.idPublicacion
+																FROM elige
+																WHERE elige.idPublicacion=publicacion.idPublicacion)".$filtrar."".$orderby;
 				$result =mysqli_query($link,$query);
 				
 				$num=mysqli_num_rows($result);

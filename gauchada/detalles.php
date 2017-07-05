@@ -79,7 +79,7 @@
 			                     	if (isset($_SESSION['id'])) {
 							 			$userId = $_SESSION['id'];
 				                     	if ($userId == $row['idUsuario']) {
-				                     		$com .= "<form action='replyComment.php' method='POST' enctype='multipart/form-data'>
+				                     		$com .= "<form action='replyComment.php?fila='.$id.' method='POST' enctype='multipart/form-data'>
                                     				<div class='col-md-2'>
                                     				<button type='submit' class='btn-sm btn-info'>Responder</button>
                                     				<input type='hidden' name='idUsuario' value=".$row2['idUsuario']." >
