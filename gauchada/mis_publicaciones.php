@@ -53,7 +53,10 @@
 									}
 									else{echo"<tr><td width=300>".$row['titulo']."</td>";}*/
 		
-      							echo"<tr><td width=300>".$row['titulo']."</td>";
+      							//echo"<tr><td width=300>".$row['titulo']."</td>";
+
+                                                      echo"<tr><td width=300><a href=detalles.php?fila=".$row['idPublicacion'].">".$row['titulo']."</a></td>";
+
       							echo"<td width=200>".$row['ciudad']."</td>";
       							echo"<td width=400>".$row['descripcion'],"</td>";
       							
