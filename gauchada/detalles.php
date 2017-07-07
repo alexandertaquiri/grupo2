@@ -91,6 +91,8 @@
 							 	if (isset($_SESSION['id'])) {
 							 		$userId = $_SESSION['id'];
 							 		if ($userId != $row['idUsuario']) {
+							 			if($_SESSION['rol']=="0"){
+                        	
 							 			
 							 ?>
 										 <div class="wrapper">
@@ -112,6 +114,7 @@
 
 								        </div>
 							  <?php
+							         }
 							  		}
 							  	}
 

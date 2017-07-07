@@ -37,7 +37,9 @@
 	       					<th abbr="ciudad" scope="col">CIUDAD</th>
 	      				    <th abbr="foto" scope="col">DESCRIPCION</th>    
 	       					<th abbr="foto" scope="col">FOTO</th>
-                                          <th abrr="postulantes" scope="col">Postulantes </th>
+                                          <th abrr="postulantes" scope="col">POSTULANTES</th>
+                                           <th  abrr="MODIFICAR" scope="col">MODIFICAR</th>
+                                             <th  abrr="BORRAR" scope="col">BAJA</th>
 	        				
       					</tr>
       					<?php
@@ -73,7 +75,11 @@
                                                       echo"<td width=300><a href=ver_elegido.php?fila2=".$row2['idPostulacion'].">ESTA PUBLICACION TIENE UN ELEGIDO</a></td></tr>"; 
                                                       } 
                                                 else {        
-                                                echo"<td width=300><a href=ver_postulantes.php?fila=".$row['idPublicacion'].">POSTULANTES</a></td></tr>";  
+                                                echo"<td width=300><a href=ver_postulantes.php?fila=".$row['idPublicacion'].">POSTULANTES</a></td>";
+                                               
+                                                echo"<td id='boton' width=80><a href=?fila=".$row['idPublicacion']." >MODIFICAR</a></td>"; 
+                                                echo"<td id='boton' width='80'> <a onclick='return confirmarCategoria()' ; href=?fila=".$row['idPublicacion'].">ELIMINAR</a>
+                                                </td></tr>"; 
                                                 }    
     						  }
       					}

@@ -5,6 +5,7 @@
 		var $usuario;
 		var $nombre;
 		var $fila;
+        var $rol;
         
         function set(){//no lo use pero lo dejo para un uso en el futuro
         	$this->estado="logueado";
@@ -18,10 +19,12 @@
         	$this->usuario=$fila['email'];
         	$this->id=$fila['idUsuario'];
             $this->nombre=$fila['nombre'];
+            $this->rol=$fila['rol'];
 
             $_SESSION['usuario']=$this->usuario;
             $_SESSION['nombre']=$this->nombre;
             $_SESSION['id']=$this->id;
+            $_SESSION['rol']=$this->rol;
             $_SESSION['estado']="logeado"; 
         }
 

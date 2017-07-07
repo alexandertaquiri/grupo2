@@ -68,9 +68,9 @@
 
 
 		
-      							echo"<tr><td width=300><h4><a href=detalles.php?fila=".$row['idPublicacion'].">".$row['titulo']."</a></h4></td>";
-      							echo"<td width=200>".$row['ciudad']."</td>";
-      							echo"<td width=400>".$row['descripcion'],"</td>";
+      							echo"<tr><td width=300 align='center'><h4><a href=detalles.php?fila=".$row['idPublicacion'].">".$row['titulo']."</a></h4></td>";
+      							echo"<td width=200 align='center'>".$row['ciudad']."</td>";
+      							echo"<td width=400 align='center'>".$row['descripcion'],"</td>";
       							
       							//echo"<td width=300><img src=mostrarImagen.php?idPublicacion=".$row['idPublicacion']."></td>";
       							echo"<td width=250><img src=";
@@ -83,12 +83,14 @@
 								//Link postularse
 								if (isset ($_SESSION['estado'])){
 									if (isset ($_SESSION['estado'])=="logeado"){
-										$idUser=$_SESSION['id'];
-										$idPub=$row['idPublicacion'];
+										if($_SESSION['rol']=="0"){
+                        	                 
+											$idUser=$_SESSION['id'];
+											$idPub=$row['idPublicacion'];
 										?>
 											<td><button type="button" class="btn btn-info" onClick="location.href='postulacion.php?idUser=<?php echo $idUser; ?>&idPub=<?php echo $idPub;?>' " > Postularse </button></td>
 										<?php
-										
+										}
 										//echo"<td width=100> <a href= </a>Postularse</td></tr>";
 									}
 								}
