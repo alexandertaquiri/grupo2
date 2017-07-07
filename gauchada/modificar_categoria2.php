@@ -30,7 +30,7 @@ $result=mysqli_query($link,"SELECT * FROM categoria WHERE nombre='$nombre'");
     if(mysqli_num_rows($result)==1){
 
       
-      echo '<script> alert("¡¡GATEGORIA EXISTENTE!!");</script>';
+      echo '<script> alert("¡¡CATEGORIA EXISTENTE!!");</script>';
       echo '<script> window.location ="modificar_categoria.php?categoria='.$idcategoria.'&nomcategoria='.$nombre2.'";</script>';
 
     }

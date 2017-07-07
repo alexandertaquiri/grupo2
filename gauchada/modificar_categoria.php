@@ -35,7 +35,7 @@ $num=mysqli_num_rows($result);
          <div id="wrapper">
             <form name="formulario" action="modificar_categoria2.php" class="login-form" method="post" onsubmit="">
                     <div class="header">
-                       <h1>GATEGORIA A MODIFICAR: <?PHP echo"$row[nombre]"; ?></h1>
+                       <h1>CATEGORIA A MODIFICAR: <?PHP echo"$row[nombre]"; ?></h1>
                     </div>
                     <div class="content">
                     	    <input type="hidden" name="idcategoria" value='<?php echo "$idcategoria"; ?>'></br>

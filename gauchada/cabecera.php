@@ -33,7 +33,8 @@
 								  		<div>
 								  			<ul>
 								  				<!-- <li><a href="mis_publicaciones.php">VER POSTULANTES</a></li> -->
-								  				<li><a href="alta_categoria.php">ALTA CATEGORIA</a></li>
+								  				
+												<li><a href="alta_categoria.php">ALTA CATEGORIA</a></li>
 								                <li><a href="ver_categorias.php">VER CATEGORIAS</a></li>
 												<li><a href=" "></a></li>
 								  				
@@ -67,7 +68,8 @@
 									  		<div>
 									  			<ul>
 									  				<!-- <li><a href="mis_publicaciones.php">VER POSTULANTES</a></li> -->
-									  				<li><a href="misElegidos.php">MIS CALIFICACIONES DADAS</a></li>
+									  				<li><a href="misPostulaciones.php">MIS POSTULACIONES</a></li>
+													<li><a href="misElegidos.php">MIS CALIFICACIONES DADAS</a></li>
 									                <li><a href="misCalificaciones.php">MIS CALIFICACIONES RECIBIDAS</a></li>
 													<li><a href=" "></a></li>
 									  				

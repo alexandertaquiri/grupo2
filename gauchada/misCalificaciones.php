@@ -33,7 +33,7 @@
 		<link rel=stylesheet href="css/bootstrap.css" >
 		<link rel=stylesheet href="css/estilos.css" type="text/css" media=screen>
       	<div id="container">
-		<div id="favores2">
+		<div class="table responsive" id="favores3">
 		
 			<?php
 				//Si la consulta devuelve resultados
@@ -44,14 +44,14 @@
 				else{
 						echo"<h4>HISTORIAL DE CALIFICACIONES</h4>";
 					?>
-						<table name="tabla" class="tabla" id="tabla">
+						<table class="table">
  						<tr>
-	       					<th width=250>GAUCHADA</th>
-	       					<th width=250>USUARIO</th>
-	      				    <th width=200>CALIFICACION</th>    
-	       					<th width=250>COMENTARIO</th>
-                            <th width=250>REPLICA</th>
-							<th width=200>FOTO</th>
+	       					<th>GAUCHADA</th>
+	       					<th>USUARIO</th>
+	      				    <th>CALIFICACION</th>    
+	       					<th>COMENTARIO</th>
+                            <th>REPLICA</th>
+							<th>FOTO</th>
 	        				
       					</tr>
 				<?php
