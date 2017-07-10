@@ -55,15 +55,24 @@
 						for($x = 1; $x <=$num ; $x++){
 							$row = mysqli_fetch_array($resx);
 							
+							$idPub=$row ['idPublicacion'];
+							//var_dump($idPub);
 							
 							//seleccionar las publicaciones con usuarios elegidos
-							$estadoGauchada="SELECT * 
+							$estadoGauchada="SELECT elige.idPublicacion 
 											FROM elige
-											WHERE EXISTS (SELECT idPublicacion
-																	FROM postulacion)";
+											WHERE elige.idPublicacion=$idPub";
 							$estadoGauchada=mysqli_query($con,$estadoGauchada);
 							$filasEstado=mysqli_fetch_array($estadoGauchada);
-							//var_dump($estadoGauchada);
+							
+							//si fui elegido para la publicacion actual
+							$elegido="	SELECT elige.idPostulacion 
+										FROM elige
+										INNER JOIN postulacion ON (elige.idPostulacion=postulacion.idPostulacion)
+										WHERE postulacion.idUsuario='$idUser' AND postulacion.idPublicacion='$idPub'";
+							$elegido=mysqli_query($con,$elegido);
+							$filasElegido=mysqli_fetch_array($elegido);
+							//var_dump($filasElegido);
 					
 					?>
 							<tr>
@@ -72,20 +81,26 @@
 								<td><?php echo "$row[descripcion]"?></td>
 								<td> <?php echo"<img src=";
 											if(($row['imagen'])==""){
-												echo"./imgs/def2.jpg";
+												echo"./imgs/Logo2.jpg";
 											}else echo "mostrarImagen.php?idPublicacion=".$row['idPublicacion'];
 											echo">";
 							?>	</td>
+								<td>
 							<?php 	if($filasEstado == NULL){?>
-										<td><?php echo "Aun no hay elegidos";?></td>
+										<?php echo "Aun no hay elegidos";?>
+										<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
 										
-							</tr>
-					<?php			}else if($filasEstado != 0){ ?>
-												<td><?php echo "Ya hay un elegido para esta GAUCHADA";?></td>
-						<?php				}
-						}			 
+					<?php			}else if($filasEstado != 0 && $filasElegido!= NULL){
+												 echo "Fuiste elegido para cumplir esta GAUCHADA";
+												 ?><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span><?php
+										}else { echo "No fuiste elegido esta vez";
+											?><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span><?php
+										}
+						}			 	
 						
 					}?>
+							</td>
+							</tr>
       	
 							
 		</table>

@@ -49,6 +49,7 @@ catch( Exception $e){
       		
       	</form>
           <p>¿Todavía no tenés cuenta? <a href="registrar.php">¡Registrarme!</a></p>
+		  <p>¿Olvidaste tu contraseña? <a href="recuperarClave.php">Recuperar</a></p>
       </div>      
 
 </body>
