@@ -44,7 +44,7 @@ $num=mysqli_num_rows($result);
 	      echo"<a href=modificar_categoria.php?categoria=".$row['idCategoria']."&nomcategoria=".$row['nombre']; ?> >MODIFICAR</a>
 
 	      </td>
-	      <td id="boton" > <?php echo"<a onclick='return confirmarCategoria()' ; href=borrar_categoria.php?categoria=".$row['idCategoria'] ?> >ELIMINAR</a></td>
+	      <td id="boton" > <?php echo"<a id='eliminar' onclick='return confirmarCategoria()' ; href=borrar_categoria.php?categoria=".$row['idCategoria'] ?> >ELIMINAR</a></td>
 	  </tr>
 	 <?php 
 	    } 

@@ -102,7 +102,7 @@ body {background-color: #F69D1F; font-family: sans-serif;}
 #favores th{background-color:#ff9500;
               color:white; height: 25px;} 
 #favores th img{width:20px ; height:20px ;}              
-#favores td{color:#4CAF50; height: 100px ;
+#favores td{color:#ff7e00; height: 100px ;
               border-bottom: 2px solid #aabcfe;} 
 #favores h4 a{text-decoration: none;
                 color:black;}
@@ -138,6 +138,16 @@ body {background-color: #F69D1F; font-family: sans-serif;}
                          margin: 4px 2px;
                          cursor: pointer;
                          border-radius:4px;} 
+
+#boton #eliminar {background-color:red;
+                         border: none;
+                         color: white;
+                         padding: 4px 8px;
+                         text-decoration: none;
+                         margin: 4px 2px;
+                         cursor: pointer;
+                         border-radius:4px;} 
+
 
 
  /*footer------*/
