@@ -16,10 +16,10 @@ include("conexion.php");
 $link=conectar();
 ?>
 <script type="text/javascript" src="java/verificacion_backend.js"></script>
-<link href="css/userProfile.css" rel="stylesheet">
+
 <title> ALTA CATEGORIA DE GAUCHADA</title>	
 </head>
-<body  class="bg" id="ingresar">
+<body  id="ingresar">
 
 <div class="wrapper">
 	
@@ -34,7 +34,7 @@ $link=conectar();
 		            <input type="text" name="categoria" class="input username" required="required" size="40"></br></br>
 		        </div> 
 		         <div class="footer">
-                   <input type="submit" name="agregar" value="agregar" class="button2" />
+                   <input type="submit" name="agregar" value="agregar" class="button" />
                
                  </div>   
 	      

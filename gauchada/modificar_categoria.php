@@ -24,10 +24,10 @@ $num=mysqli_num_rows($result);
  $row = mysqli_fetch_array($result);
 ?>
 <script type="text/javascript" src="java/verificacion_backend.js"></script>
-<link href="css/userProfile.css" rel="stylesheet">
+
 <title> MODIFICAR CATEGORIAS DE GAUCHADA </title>	
 </head>
-<body  class="bg">
+<body >
 <div id="ingresar">
     <div class="wrapper">
     	
@@ -44,7 +44,7 @@ $num=mysqli_num_rows($result);
                             <input type="text" name="nombre" class="input username"  required="required" size="25"></br></br>
                     </div>
                     <div class="footer">
-                          <input type="submit" name="modificar" value="modificar" class="button2" />
+                          <input type="submit" name="modificar" value="modificar" class="button" />
                
                     </div>
                  
