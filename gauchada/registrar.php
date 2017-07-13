@@ -29,31 +29,31 @@
 				
 				<div class="content">
 					<label for="nombre">Nombre: </br></label>
-					<input type="text" name="nombre" class="input username" size="25">
+					<input type="text" name="nombre" class="input username" size="25" required="required">
 					
 					<label for="apellido">Apellido: </br></label>
-					<input type="text" name="apellido" class="input username" size="25">
+					<input type="text" name="apellido" class="input username" size="25" required="required">
 					
 					<label for="telefono">Telefono: </br></label>
-					<input type="tel"  name="telefono" class="input">
+					<input type="tel"  name="telefono" class="input" required="required>
 					
 					<label for="edad">Edad: </br></label>
-					<input type="number" name="edad" min="18" max="99" class="input username">
+					<input type="number" name="edad" min="18" max="99" class="input username" required="required">
 					
 					<label for="email">Email: </br></label>
-					<input type="email" name="email" class="input username" size=30>
+					<input type="email" name="email" class="input username" size=30 required="required">
 					
 					<label for="dni">DNI: </br></label>
-					<input type="text" name="dni" class="input username" maxlength="8">
+					<input type="text" name="dni" class="input username" maxlength="8" required="required">
 					
 					<label for="direccion">Direccion: </br></label>
-					<input type="text" name="direccion" class="input username">
+					<input type="text" name="direccion" class="input username" required="required">
 					
 					<label for="password">Contraseña: </br></label>
-					<input type="password" name="password1" size=8 minlength="6" maxlength="6" class="input password">
+					<input type="password" name="password1" size=8 minlength="6" maxlength="6" class="input password" required="required">
 					
 					<label for="password" >Confirme contraseña: </br></label>
-					<input type="password" name="password2" minlength="6" size="8" maxlength="6" class="input password">	
+					<input type="password" name="password2" minlength="6" size="8" maxlength="6" class="input password" required="required">	
 					
 					<label for="imagen">Subir foto (opcional) </br></label>
 					<input type="file" name="imagen">

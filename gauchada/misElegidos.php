@@ -52,7 +52,7 @@
  						<tr>
 	       					<th>GAUCHADA</th>
 	       					<th>USUARIO</th>
-	      				    <th>CALIFICACION</th>    
+	      				    <th width="200">CALIFICACION</th>    
 	       					<th>COMENTARIO</th>
                             <th>REPLICA</th>
 							<th>FOTO</th>
