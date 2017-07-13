@@ -85,7 +85,7 @@
 							//Si aun no hay replica, mostrar el boton responder
 							if($replica==""){
 							?>	
-								<td><button type="button" class="btn btn-info" onClick="location.href='replicarCalificacion.php?idPostulacion=<?php echo $idPostulacion; ?>' " > RESPONDER </button></td>
+								<td><button type="button" class="botonResponder" onClick="location.href='replicarCalificacion.php?idPostulacion=<?php echo $idPostulacion; ?>' " > RESPONDER </button></td>
 										
 								
 								<?php

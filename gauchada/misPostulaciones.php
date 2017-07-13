@@ -41,7 +41,7 @@
 					echo"<h4>NO SE ENCONTRARON RESULTADOS</h4>";
 				}
 				else{
-						echo"<h4>GAUCHADAS A LAS QUE ME POSTULE</h4>";
+						echo"<h4>GAUCHADAS A LAS QUE ME POSTULÉ</h4>";
 						?>
 						<table class="table" >
  						<tr>
@@ -58,6 +58,8 @@
 							$idPub=$row ['idPublicacion'];
 							//var_dump($idPub);
 							
+							$idUserPub=$row ['idUsuario'];
+
 							//seleccionar las publicaciones con usuarios elegidos
 							$estadoGauchada="SELECT elige.idPublicacion 
 											FROM elige
@@ -87,13 +89,15 @@
 							?>	</td>
 								<td>
 							<?php 	if($filasEstado == NULL){?>
-										<?php echo "Aun no hay elegidos";?>
+										<?php echo "Aun no hay elegidos en esta GAUCHADA <br/>";?>
 										<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
 										
 					<?php			}else if($filasEstado != 0 && $filasElegido!= NULL){
-												 echo "Fuiste elegido para cumplir esta GAUCHADA";
-												 ?><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span><?php
-										}else { echo "No fuiste elegido esta vez";
+												 echo "Fuiste elegido para esta GAUCHADA <br/>";
+												 ?>
+												 <button type="button" class=botonElegido onClick="location.href='verUsuario.php?id=<?php echo $idUserPub; ?>' " > 
+												 <span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> </button><?php
+										}else { echo "No fuiste elegido en esta GAUCHADA <br/>"; 
 											?><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span><?php
 										}
 						}			 	

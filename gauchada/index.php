@@ -48,9 +48,9 @@
 				?>
 					<table id="tablaPrincipal">
  						<tr>
-	       					<th abbr="titulo" scope="col">TITULO</th>
+	       					<th abbr="titulo" scope="col">TÍTULO</th>
 	       					<th abbr="ciudad" scope="col">CIUDAD</th>
-	      				    <th abbr="foto" scope="col">DESCRIPCION</th>    
+	      				    <th abbr="foto" scope="col">DESCRIPCIÓN</th>    
 	       					<th abbr="foto" scope="col">FOTO</th>
 	        				
       					</tr>

@@ -5,11 +5,11 @@
 
             <form action="index.php" method="GET">
                 
-                titulo:
+                Título:
                 <input type="text" name="busca" value="<?php
                 if(isset($_GET['busca'])){ echo $_GET['busca']; }?>" size="30" placeholder="animales, objetos, pedidos, etc.">
                  
-                categorias:
+                Categorías:
                 <select name="categorias">
                     <option value="Todos">Todos</option>
                     <?php
@@ -30,7 +30,7 @@
                     ?>  
                     
                </select>
-                ciudad:
+                Ciudad:
                  <select  name="ciudad">                
                          <option value="Todos"
                              <?php if(isset($_GET['ciudad'])){
@@ -53,9 +53,9 @@
                          <option value="Corrientes"
                              <?php if(isset($_GET['ciudad'])){
                                        if("Corrientes"==$_GET['ciudad']){echo "selected=selected"; }} ?> >Corrientes</option>
-                         <option value="Entre Rios"
+                         <option value="Entre Ríos"
                              <?php if(isset($_GET['ciudad'])){
-                                       if("Entre Rios"==$_GET['ciudad']){echo "selected=selected"; }} ?> >Entre Rios</option>
+                                       if("Entre Ríos"==$_GET['ciudad']){echo "selected=selected"; }} ?> >Entre Ríos</option>
                          <option value="Formosa"
                              <?php if(isset($_GET['ciudad'])){
                                        if("Formosa"==$_GET['ciudad']){echo "selected=selected"; }} ?> >Formosa</option>
@@ -77,9 +77,9 @@
                          <option value="Neuquén"
                              <?php if(isset($_GET['ciudad'])){
                                        if("Neuquén"==$_GET['ciudad']){echo "selected=selected"; }} ?> >Neuquén</option>
-                         <option value="Rio Negro"
+                         <option value="Río Negro"
                              <?php if(isset($_GET['ciudad'])){
-                                       if("Rio Negro"==$_GET['ciudad']){echo "selected=selected"; }} ?> >Rio Negro</option>
+                                       if("Río Negro"==$_GET['ciudad']){echo "selected=selected"; }} ?> >Río Negro</option>
                          <option value="Salta"
                              <?php if(isset($_GET['ciudad'])){
                                        if("Salta"==$_GET['ciudad']){echo "selected=selected"; }}?> >Salta</option>
@@ -92,9 +92,9 @@
                          <option value="Santa Cruz"
                              <?php if(isset($_GET['ciudad'])){
                                        if("Santa Cruz"==$_GET['ciudad']){echo "selected=selected"; }} ?> >Santa Cruz</option>
-                         <option value="Santa Fé"
+                         <option value="Santa Fe"
                              <?php if(isset($_GET['ciudad'])){
-                                       if("San Fé"==$_GET['ciudad']){echo "selected=selected"; }} ?> >Santa Fé</option>
+                                       if("San Fe"==$_GET['ciudad']){echo "selected=selected"; }} ?> >Santa Fe</option>
                          <option value="Santiago del Estero"
                              <?php if(isset($_GET['ciudad'])){
                                        if("Santiago"==$_GET['ciudad']){echo "selected=selected"; }} ?> >Santiago del Estero</option>
