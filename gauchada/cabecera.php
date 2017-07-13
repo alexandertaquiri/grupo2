@@ -19,7 +19,7 @@
 
                         if($_SESSION['rol']=="1"){
                         	echo"<h3><a href=index.php><img id=inicio src=imgs/logo2.jpg></a> | 
-      	           	             Hola Administrador ".$_SESSION['nombre']." ! | <a href=salir.php>cerrar sesion</a></h3>";
+      	           	             HOLA ADMINISTRADOR ".$_SESSION['nombre']." ! | <a href=salir.php>CERRAR SESIÓN</a></h3>";
 
                         ?>	
                         	<nav>
@@ -36,7 +36,7 @@
 								  				
 												<li><a href="alta_categoria.php">ALTA CATEGORIA</a></li>
 								                <li><a href="ver_categorias.php">VER CATEGORIAS</a></li>
-												<li><a href=" "></a></li>
+												<li><a href="rankingUsuarios.php">RANKING DE GAUCHOS</a></li>
 								  				
 								  			</ul>
 								  		</div>
@@ -54,7 +54,7 @@
 							}
 				      	  			 echo"
 							<h3><a href=index.php><img id=inicio src=imgs/logo2.jpg></a> | 
-	      	           	     Hola ".$_SESSION['nombre']." ! | <a href=salir.php>cerrar sesion</a></h3>";
+	      	           	     HOLA ".$_SESSION['nombre']." ! | <a href=salir.php>CERRAR SESIÓN</a></h3>";
 	    ?>
 	      	           	 <!--echo"-->
 	      	           	 		<nav>

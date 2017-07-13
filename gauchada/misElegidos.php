@@ -48,7 +48,7 @@
 				
                         else{
 				?>
-					<table class="table">
+					<table class="table" id=favores3>
  						<tr>
 	       					<th>GAUCHADA</th>
 	       					<th>USUARIO</th>

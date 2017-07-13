@@ -39,17 +39,17 @@ catch( Exception $e){
       		<label for="usuario">Usuario:</label>
       		<input type="email" name="usuario" class="input username"  required="required" size=25></br></br>
       		<label for="clave">Contraseña:</label>
-      		<input type="password" class="input password" name="clave" minlength="6" maxlength="6" required="required" size=8></br></br>
-      		
+      		<input type="password" class="input password" name="clave" minlength="6" maxlength="6" required="required" size=8></br>
+		       <p><a href="recuperarClave.php">Olvide mi clave</a></p>
+            
             </div>
             <div class="footer">
                <input type="submit" name="Ingresar" value="Ingresar" class="button" />
                
             </div>
-      		
-      	</form>
+            
+         </form>
           <p>¿Todavía no tenés cuenta? <a href="registrar.php">¡Registrarme!</a></p>
-		  <p>¿Olvidaste tu contraseña? <a href="recuperarClave.php">Recuperar</a></p>
       </div>      
 
 </body>

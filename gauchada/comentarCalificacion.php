@@ -1,4 +1,5 @@
 <?php
+	include("cabecera.php");
 	$id = $_GET['id'];
 	$puntaje = $_GET['puntaje'];
 	$idPostulacion = $_GET['idPostulacion'];
@@ -6,7 +7,7 @@
 	
 	?>
 			<link rel="stylesheet" type="text/css" href="css/estilos.css">
-			<form name="formulario2" action="actualizarPuntaje.php" class="login-form" method="post">
+			<form name="formulario2" action="actualizarPuntaje.php" class="form" method="post">
 			 
 				<div class="header">
 				   <h1>Por qué calificaste así?</h1>
@@ -14,7 +15,7 @@
 			 
 				<div class="content">
 					<label for="coment">Dejá tu comentario:</label>
-					<textarea type="input" maxlength="160" rows="10" name="coment" class="input"  required="required" size=25></textarea></br></br>
+					<textarea type="input" maxlength="100" rows="10" name="coment" class="input"  required="required" size=200></textarea></br>
 					<input type="hidden" name="idUsuario" value=<?php echo "$id"; ?> >
 					<input type="hidden" name="idPostulacion" value= <?php echo "$idPostulacion"; ?> >
 					<input type="hidden" name="puntaje" value= <?php echo "$puntaje"; ?> >

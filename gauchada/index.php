@@ -10,6 +10,7 @@
 
 <head>
 	<title> Una gauchada </title>
+	<link rel=stylesheet href="css/estilos.css" type="text/css" media=screen>
 </head>
 	
 <body>
@@ -45,7 +46,7 @@
 				
                 else{
 				?>
-					<table>
+					<table id="tablaPrincipal">
  						<tr>
 	       					<th abbr="titulo" scope="col">TITULO</th>
 	       					<th abbr="ciudad" scope="col">CIUDAD</th>
@@ -88,7 +89,7 @@
 											$idUser=$_SESSION['id'];
 											$idPub=$row['idPublicacion'];
 										?>
-											<td><button type="button" class="btn btn-info" onClick="location.href='postulacion.php?idUser=<?php echo $idUser; ?>&idPub=<?php echo $idPub;?>' " > Postularse </button></td>
+											<td><button type="button" class="botonPostularse" onClick="location.href='postulacion.php?idUser=<?php echo $idUser; ?>&idPub=<?php echo $idPub;?>' " > Postularse </button></td>
 										<?php
 										}
 										//echo"<td width=100> <a href= </a>Postularse</td></tr>";
