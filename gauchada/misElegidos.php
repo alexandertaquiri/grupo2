@@ -69,10 +69,12 @@
 								$calificado=mysqli_fetch_array(mysqli_query($con,"SELECT elige.calificacion FROM elige WHERE idPostulacion=$idPostulacion"));
 								$replica=mysqli_fetch_array(mysqli_query($con,"SELECT elige.replica FROM elige WHERE idPostulacion=$idPostulacion"));
       							$comentario=mysqli_fetch_array(mysqli_query($con,"SELECT elige.comentario FROM elige WHERE idPostulacion=$idPostulacion"));
-								?><tr>
+								?>
+								<tr>
 									<td><?php echo "$row[titulo]"?></td>
 									<td><?php echo "$row[nombre]"?></td>
 								<?php
+								$idUser=$row['idUsuario'];
 								//Si no tiene calificacion ni comentario, mostrar botones calificacion
 								if($calificado[0]==NULL && $comentario[0]==NULL && $replica[0]==NULL){
 								?>
@@ -82,7 +84,7 @@
 										<button type="button" class=b2 onClick="location.href='comentarCalificacion.php?id=<?php echo $idUser; ?>&puntaje=<?php echo $neutral; ?>&idPostulacion=<?php echo $idPostulacion; ?>&calificacion=<?php echo "neutral" ?>' " > <span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span> </button> 
 										<button type="button" class=b3 onClick="location.href='comentarCalificacion.php?id=<?php echo $idUser; ?>&puntaje=<?php echo $negativo; ?>&idPostulacion=<?php echo $idPostulacion; ?>&calificacion=<?php echo "negativo" ?>' " > <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> </button>
 								
-									</td>			
+									</td>
 									<td></td>
 									<td></td>
 									
@@ -93,7 +95,7 @@
       								}else echo"mostrarImagen2.php?idUsuario=".$row['idUsuario'];
       								echo">"
 									?></td>
-                                    </tr>
+                                </tr>
 									
 								<?php
 									
