@@ -17,6 +17,8 @@
 	
 	<?php
 		Include ("cabecera.php");
+		Include ("funcionesGauchadas.php");
+		
 	?>
 
 	<!--
@@ -80,17 +82,18 @@
       							}else 
 									echo"mostrarImagen.php?idPublicacion=".$row['idPublicacion'];
 									echo"></td>";
-									
+								?><td><?php	
 								//Link postularse
 								if (isset ($_SESSION['estado'])){
 									if (isset ($_SESSION['estado'])=="logeado"){
 										if($_SESSION['rol']=="0"){
-                        	                 
 											$idUser=$_SESSION['id'];
 											$idPub=$row['idPublicacion'];
+                        	                if(!esMiGauchada($idUser, $idPub, $link) and !mePostule($idUser, $idPub, $link)){
 										?>
-											<td><button type="button" class="botonPostularse" onClick="location.href='postulacion.php?idUser=<?php echo $idUser; ?>&idPub=<?php echo $idPub;?>' " > Postularse </button></td>
+											<button type="button" class="botonPostularse" onClick="location.href='postulacion.php?idUser=<?php echo $idUser; ?>&idPub=<?php echo $idPub;?>' " > Postularse </button>
 										<?php
+											}
 										}
 										//echo"<td width=100> <a href= </a>Postularse</td></tr>";
 									}
@@ -99,7 +102,7 @@
       						}
       					}
       					?>
-      					
+      					</td>
       				</table>	
 		
 		</div>
