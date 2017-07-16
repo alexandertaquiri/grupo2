@@ -18,6 +18,7 @@
 	<?php
 		Include ("cabecera.php");
 		Include ("funcionesGauchadas.php");
+		Include ("funcionesFavoritos.php");
 		
 	?>
 
@@ -94,6 +95,16 @@
 											<button type="button" class="botonPostularse" onClick="location.href='postulacion.php?idUser=<?php echo $idUser; ?>&idPub=<?php echo $idPub;?>' " > Postularse </button>
 										<?php
 											}
+											//La marco como favorita solo si no es mi gauchada
+											if(!esMiFav($idUser, $idPub, $link)){
+												
+												?><td> <button type="button" class="botonEstrella" onClick="location.href='marcarFavorito.php?idUser=<?php echo $idUser; ?>&idPub=<?php echo $idPub;?>'" " > ★ </button> </td>
+												<?php
+											} else {
+												?><td> <button type="button" class="botonEstrellaMarcada" onClick="location.href='quitarFavorito.php?idUser=<?php echo $idUser; ?>&idPub=<?php echo $idPub;?>'" " > ★ </button> </td>
+												<?php
+											}
+
 										}
 										//echo"<td width=100> <a href= </a>Postularse</td></tr>";
 									}
@@ -102,6 +113,7 @@
       						}
       					}
       					?>
+      					
       					</td>
       				</table>	
 		

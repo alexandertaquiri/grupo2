@@ -37,6 +37,7 @@
 												<li><a href="alta_categoria.php">ALTA CATEGORIA</a></li>
 								                <li><a href="ver_categorias.php">VER CATEGORIAS</a></li>
 												<li><a href="rankingUsuarios.php">RANKING DE GAUCHOS</a></li>
+												<li><a href=""> </a></li>
 								  				
 								  			</ul>
 								  		</div>
@@ -71,6 +72,7 @@
 									  				<li><a href="misPostulaciones.php">MIS POSTULACIONES</a></li>
 													<li><a href="misElegidos.php">MIS CALIFICACIONES DADAS</a></li>
 									                <li><a href="misCalificaciones.php">MIS CALIFICACIONES RECIBIDAS</a></li>
+									                <li><a href="misFavoritos.php">MIS GAUCHADAS FAVORITAS</a></li>
 													<li><a href=" "></a></li>
 									  				
 									  			</ul>
