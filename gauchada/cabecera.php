@@ -37,6 +37,7 @@
 												<li><a href="alta_categoria.php">ALTA CATEGORIA</a></li>
 								                <li><a href="ver_categorias.php">VER CATEGORIAS</a></li>
 												<li><a href="rankingUsuarios.php">RANKING DE GAUCHOS</a></li>
+												<li><a href="fechaGanancias.php">VER GANANCIAS</a></li>
 												<li><a href=""> </a></li>
 								  				
 								  			</ul>

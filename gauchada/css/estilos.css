@@ -72,6 +72,23 @@ body {background-color: #F69D1F; font-family:'Bree Serif', serif;}
 #favores table{border-spacing: "5px" ;}          
 /*#productos caption{color:black; margin-bottom: 200px;} */ 
 
+#favores th{background-color:#ff9500;
+              color:white; height: 25px;} 
+#favores th img{width:20px ; height:20px ;}              
+#favores td{color:DarkOrange; height: 100px ;
+              border-bottom: 2px solid DarkOrange;} 
+#favores h4 a{text-decoration: none;
+                color:DarkOrange;}
+#favores td img{width: 200px;height: 150px}
+
+#favores h4 {text-decoration: none;
+                color:DarkOrange;}
+
+#favores h4 a:hover{text-decoration: none;
+                color:Gray; }
+#favores td:hover{color:Gray; height: 100px ;
+              border-bottom: 2px solid DarkOrange; } 
+
 
 #favores2{text-align:center;
            margin-top: 0px;
@@ -96,9 +113,9 @@ body {background-color: #F69D1F; font-family:'Bree Serif', serif;}
                 color:DarkOrange;}
 
 #favores2 a:hover{text-decoration: none;
-                color:Gray; font-size: large}
+                color:Gray; }
 #favores2 td:hover{color:Gray; height: 100px ;
-              border-bottom: 2px solid DarkOrange; font-size: large}
+              border-bottom: 2px solid DarkOrange; }
 
 
 				
@@ -120,28 +137,30 @@ body {background-color: #F69D1F; font-family:'Bree Serif', serif;}
                 color:DarkOrange;}
 
 #favores3 a:hover{text-decoration: none;
-                color:Gray; font-size: large}
-#favores3 td:hover{color:Gray; height: 100px ;
-              border-bottom: 2px solid DarkOrange; font-size: large}
+                color:Gray; }
+#favores3 td:hover{color:Gray; height: 100px ; 
+              border-bottom: 2px solid DarkOrange; }
+
+#ganancias{text-align:center;
+           font-family:'Bree Serif', serif;
+           background-color: white;
+}
+#ganancias tr img {width:90%; height:100%;} 
+#ganancias table {border-spacing: "5px" ;} 
+#ganancias  th{background-color:DarkOrange; font-size: medium;
+              color:white; height: 25px; text-align:center;}
+#ganancias td{color:DarkOrange ; height: 50px ; font-size: large; line-height: 50px;
+              border-bottom: 2px solid DarkOrange; background-color: white; vertical-align: baseline;}          
+#ganancias h4 {text-decoration: none;
+                color:DarkOrange;}
+
+#ganancias a:hover{text-decoration: none;
+                color:Gray; }
+#ganancias td:hover{color:Gray;  
+              border-bottom: 2px solid DarkOrange; }
+
+
 								
-
-
-#favores th{background-color:#ff9500;
-              color:white; height: 25px;} 
-#favores th img{width:20px ; height:20px ;}              
-#favores td{color:DarkOrange; height: 100px ;
-              border-bottom: 2px solid DarkOrange;} 
-#favores h4 a{text-decoration: none;
-                color:DarkOrange;}
-#favores td img{width: 200px;height: 150px}
-
-#favores h4 {text-decoration: none;
-                color:DarkOrange;}
-
-#favores h4 a:hover{text-decoration: none;
-                color:Gray; font-size: large}
-#favores td:hover{color:Gray; height: 100px ;
-              border-bottom: 2px solid DarkOrange; font-size: large} 
 
  /*esta tabla es para las modificacione  de categoria reputacion etc*/
  #tablita{text-align:center;
@@ -813,4 +832,28 @@ BOTON FAVORITOS
  box-shadow: inset 0 0 0 3px white;
  font-family:'Bree Serif', serif;
  font-size: 50px;
+}
+/*******************
+REPORTE DE GANANCIAS
+********************/
+.botonFecha {
+ border: none;
+ background: DarkOrange;
+ color: white;
+ padding: 8px;
+ font-size: 16px;
+ border-radius: 5px;
+ position: relative;
+ box-sizing: border-box;
+ transition: all 500ms ease;
+ font-family:'Bree Serif', serif;
+ width: 150px;
+}
+
+.botonFecha:hover {
+ background: rgba(0,0,0,0);
+ color: DarkOrange;
+ box-shadow: inset 0 0 0 3px DarkOrange;
+ font-family:'Bree Serif', serif;
+ font-size: 16px;
 }

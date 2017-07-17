@@ -40,7 +40,7 @@ catch( Exception $e){
       		<input type="email" name="usuario" class="input username"  required="required" size=25></br></br>
       		<label for="clave">Contraseña:</label>
       		<input type="password" class="input password" name="clave" minlength="6" maxlength="6" required="required" size=8></br>
-		       <p><a href="recuperarClave.php">Olvide mi clave</a></p>
+		       <p><a href="recuperarClave.php">Olvidé mi clave</a></p>
             
             </div>
             <div class="footer">

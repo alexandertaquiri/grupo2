@@ -95,13 +95,13 @@ session_start();
         }
         else{//si el usuario no existe se da de alta en la base de  datos;
           
-            $query="INSERT INTO usuarios (nombre,apellido,email,telefono,edad,dni,direccion,puntos,rol,clave,foto,tipoimagen)values('$n','$a','$e','$t','$ed','$dni','$dir','$puntos','$rol','$p','$imagen2','$extension')";
+            $query="INSERT INTO usuarios (nombre,apellido,email,telefono,edad,dni,direccion,puntos,rol,clave,foto,tipoimagen, credito)values('$n','$a','$e','$t','$ed','$dni','$dir','$puntos','$rol','$p','$imagen2','$extension', '1')";
             $resul5=mysqli_query($con,$query);
 
             $id=mysqli_insert_id($con);
     
-            $query2="INSERT INTO credito (monto,idUsuario)values('1','$id')";
-            $resul2=mysqli_query($con,$query2);
+           // $query2="INSERT INTO credito (monto,idUsuario)values('1','$id')";
+           // $resul2=mysqli_query($con,$query2);
             
 
         }
