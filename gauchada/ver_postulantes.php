@@ -13,14 +13,15 @@
       	$id=$_SESSION['id'];//id dueño de la publicacion por las dudas si lo uso mas adelante
     
       	$con=conectar();
-      	$result=mysqli_query($con,"SELECT usuarios.nombre,postulacion.idPostulacion,postulacion.idPublicacion, usuarios.apellido,usuarios.foto,usuarios.idUsuario 
+      	$result=mysqli_query($con,"SELECT usuarios.nombre,postulacion.idPostulacion,postulacion.idPublicacion, usuarios.apellido,usuarios.foto,usuarios.idUsuario,postulacion.comentario,usuarios.idUsuario
       		FROM usuarios 
                   
       		INNER JOIN postulacion  ON postulacion.idUsuario=usuarios.idUsuario
       		 WHERE postulacion.idPublicacion='$idp'");
+          
       	
       	?>
-
+            
       	<div id="container">
 		<div id="favores2">
 		
@@ -37,7 +38,9 @@
  						<tr>
 	       					<th abbr="titulo" scope="col">NOMBRE</th>
 	       					<th abbr="ciudad" scope="col">APELLIDO</th>
-	      				    <th abbr="foto" scope="col">FOTO</th>    
+	      				      <th abbr="foto" scope="col">FOTO</th>
+                                          <th abbr="reputacion" scope="col">REPUTACION</th>
+                                          <th abbr="comentario" scope="col">COMENTARIO</th>  
 	       					<th abbr="elegir" scope="col">ELEGIR</th>
                             
 	        				
@@ -56,6 +59,16 @@
       									echo"./imgs/def.jpg";
       								}else echo"mostrarImagen2.php?idUsuario=".$row['idUsuario'];
       								echo"></td>";
+                                                
+                                                //traerme la reputacion del usuario
+                                                $idUser=$row['idUsuario'];
+                                                $link=conectar();
+                                                include_once("calcularReputacion.php");
+                                                $reputacion=verReputacion($idUser,$link);
+                                                echo"<td width=300>".$reputacion."</td>";
+                                                echo"<td width=300>".$row['comentario']."</td>";
+
+
                                                 echo"<td width=200><a href=elegir.php?fila=".$row['idPublicacion']."&postulacion=".$row['idPostulacion'].">Elegir</a></td></tr>";      
     						  }
       					}
@@ -64,9 +77,7 @@
       				</table>	
 		
 		</div>
-		<?php
-			 include("footer.php");
-		?>
+		
 	</div>	
 </body>
 </html>
