@@ -45,8 +45,8 @@
 			<?php echo "<h4>MIS GANANCIAS</h4>"; ?>
 		 	<tr>
 				<th>NOMBRE</th>
-				<th>FECHA</th>
-			    <th>CREDITO COMPRADO</th>
+				<th>FECHA DE COMPRA</th>
+			    <th>CRÉDITO COMPRADO</th>
 			    <th>MONTO PAGADO</th>
 			</tr>
 
@@ -77,7 +77,7 @@
 			<tr>
 				<th></th>
 				<th></th>
-				<th>TOTAL CREDITOS</th>
+				<th>TOTAL CRÉDITOS</th>
 				<th>GANANCIA TOTAL</th>
 			
 			</tr>
