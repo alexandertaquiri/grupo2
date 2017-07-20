@@ -4,7 +4,7 @@ include("conexion.php");
  $link=conectar();
 
 
-$idcategoria=$_POST['idcategoria']; //el name del input es idcategoria 
+$idreputacion=$_POST['idreputacion']; //el name del input es idreputacion
 $nombre=$_POST['nombre'];
 $nombre2=$_POST['nombre2'];
 function test_input($data) {
@@ -16,8 +16,7 @@ function test_input($data) {
 
 function validarcampos(){
   
- 
-$nombre=test_input($_POST['nombre']);//tirm elimima espacios
+ $nombre=test_input($_POST['nombre']);//tirm elimima espacios
     
    $patron1=("/^[a-z]+$/i");
    $nvalido=("/\d/");
@@ -35,42 +34,39 @@ $nombre=test_input($_POST['nombre']);//tirm elimima espacios
 }
 
 
+if(validarcampos()){
 
-
-if(validarcampos()==true){
-
-$result=mysqli_query($link,"SELECT * FROM categoria WHERE nombre='$nombre'");
+    $result=mysqli_query($link,"SELECT * FROM reputacion WHERE categoria='$nombre'");
   
     if(mysqli_num_rows($result)==1){
 
       
-      echo '<script> alert("¡¡CATEGORIA EXISTENTE!!");</script>';
-      echo '<script> window.location ="modificar_categoria.php?categoria='.$idcategoria.'&nomcategoria='.$nombre2.'";</script>';
+      echo '<script> alert("¡¡REPUTACION EXISTENTE!!");</script>';
+      echo '<script> window.location ="modificar_reputacion.php?categoria='.$idreputacion.'&nomcategoria='.$nombre2.'";</script>';
 
     }
     else{
       
     if($result){
-        $query="UPDATE categoria SET nombre ='$nombre' WHERE idCategoria ='$idcategoria'";
+        $query="UPDATE reputacion SET categoria ='$nombre' WHERE idReputacion ='$idreputacion'";
           $result=mysqli_query($link,$query);
 
           //header("location:ver_categorias.php");
              echo '<script> alert("¡¡MODIFICACION EXITOSA!!");</script>';
-             echo '<script> window.location ="ver_categorias.php";</script>';
+             echo '<script> window.location ="ver_reputaciones.php";</script>';
 
       }
     else{
           echo '<script> alert("¡¡INTENTE NUEVAMENTE!!");</script>';
-          echo '<script> window.location ="modificar_categoria.php?categoria='.$idcategoria.'&nomcategoria='.$nombre2.'";</script>';
+          echo '<script> window.location ="modificar_reputacion.php?categoria='.$idreputacion.'&nomcategoria='.$nombre2.'";</script>';
         }
      mysqli_free_result($result);
      mysqli_close($link);   
 
     }
-}//cierro la funcion 
-else{
+ }//cierro la funcion 
+ else{
           //echo '<script> alert("¡¡INTENTE NUEVAMENTE!!");</script>';
-          echo '<script> window.location ="modificar_categoria.php?categoria='.$idcategoria.'&nomcategoria='.$nombre2.'";</script>';
-        }   
-  
+          echo '<script> window.location ="modificar_reputacion.php?categoria='.$idreputacion.'&nomcategoria='.$nombre2.'";</script>';
+     }   
 ?>

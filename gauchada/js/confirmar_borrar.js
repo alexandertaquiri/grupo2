@@ -8,3 +8,13 @@ function confirmarCategoria()
                 
 
       }
+function confirmarReputacion()
+      {
+            if( confirm("¿ESTA SEGURO QUE DESEA BORRAR ESTA REPUTACION?"))
+                { location.href='borrar_reputacion.php';
+                   return true;}
+            else
+            	return false;
+                
+
+      }

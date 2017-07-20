@@ -19,23 +19,24 @@ catch(Exception $e){
 <?php
 
 $categoria=$_POST['categoria'];
+$puntaje=$_POST['puntaje'];
+
 function test_input($data) {
   $data = trim($data);
   $data = stripslashes($data);
   $data = htmlspecialchars($data);
   return $data;
 }
-
-
 function validarcampos(){
-	 
-   $categoria=test_input($_POST['categoria']);//tirm elimima espacios
+    $cat=test_input($_POST['categoria']);//tirm elimima espacios
+    $puntaje=$_POST['puntaje'];
+    $nvalido=("/\d/");
     
-   $patron1=("/^[a-z]+$/i");
-   $nvalido=("/\d/");
+     $patron1=("/^[a-z]+$/i");
+    $patron2=("/^\d{9}$/");
    if(isset($_POST['agregar'])){
-        if ($categoria=='' || (preg_match($nvalido, $categoria))){
-            echo"<script> alert('INGRESE UNA CATEGORIA VALIDA');</script>";
+        if (preg_match($nvalido, $cat)){
+            echo"<script> alert('INGRESE UNA REPUTACION VALIDA');</script>";
             return false; 
         }
 
@@ -44,29 +45,32 @@ function validarcampos(){
            }                         
     }
    else {echo'<script> alert( "LOS DATOS INGRESADOS NO SON VALIDOS");</script>';}   
-}
+  }
+
+
 
 if(validarcampos()==true){
+
 include("conexion.php");
   $con=conectar();
 
-  $result=mysqli_query($con,"SELECT * FROM categoria WHERE nombre ='$categoria'");//consultar si existe la categoria
+  $result=mysqli_query($con,"SELECT * FROM reputacion WHERE categoria ='$categoria'");//consultar si existe la categoria
   if(mysqli_num_rows($result)==1){//ya existe la categoria;
-      echo '<script> alert("YA EXISTE  LA CATEGORIA")</script>';
+      echo '<script> alert("YA EXISTE  LA REPUTACION")</script>';
      
-      echo'<script> window.location ="alta_categoria.php";</script>';
+      echo'<script> window.location ="alta_reputacion.php";</script>';
   }
   else{
       if($result){
-        $query="INSERT INTO categoria (nombre) VALUES('$categoria')";//inserta la nueva categoria de pubñicacion a la tabla categorias
+        $query="INSERT INTO reputacion (categoria,puntaje) VALUES('$categoria','$puntaje')";//inserta la nueva categoria de pubñicacion a la tabla categorias
         $resultado=mysqli_query($con,$query);
-        echo '<script> alert (" LA CATEGORIA DE GAUCHADA SE AGREGO CORRECTAMENTE")</script>';
+        echo '<script> alert (" LA REPUTACION DE GAUCHADA SE AGREGO CORRECTAMENTE")</script>';
         //header("location:ver_categorias.php");
-         echo '<script> window.location ="ver_categorias.php";</script>';
+         echo '<script> window.location ="ver_reputaciones.php";</script>';
       }
       else{
         echo '<script> alert ("INTENTE NUEVAMENTE") </script>';
-        echo '<script> window.location ="alta_categoria.php";</script>';
+        echo '<script> window.location ="alta_reputacion.php";</script>';
 
       }
       mysqli_free_result($resultado);
@@ -75,7 +79,7 @@ include("conexion.php");
  }
  else {
       //echo '<script> alert ("INTENTE NUEVAMENTE"); </script>';
-            echo '<script> window.location ="alta_categoria.php";</script>';  
+            echo '<script> window.location ="alta_reputacion.php";</script>';  
 
      }  
   
