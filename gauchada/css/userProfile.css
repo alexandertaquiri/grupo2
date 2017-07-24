@@ -1,53 +1,60 @@
-input, select[readonly] {
-    background-color:white !important;
-}
-
-.top-space{
-    margin-top: 50px;
-}
-
-.left-space {
-    margin-left: 0px;
-    padding-left: 0px;
-}
-
-.bg {
-    background: url('../imgs/rail.jpg')no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+.banner {
+    background: url('../imgs/gaucho2.jpg');
+    width: 100%;
+    position: relative;
+    min-height: 350px;
+    margin: 50px 0 0 0;
+    background-repeat: no-repeat;
     background-size: cover;
+    box-sizing: border-box;
+}
+
+.hide-button {
+    display:none !important;
+    width: 1px;
+}
+
+.white {
+    color: white;    
+}
+
+.cnt-bnr {
+    padding: 0;
+}
+
+.margin-cont {
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.nv-vrt {
+    margin-top: 15px;
 }
 
 .panel {
-    background-color: transparent;
-    border: none;
+    background-color: white;
 }
 
 .vertical {
-    background-color: #222;
-    padding-right: 0px;
+    background-color: white;
+    border-radius: 4px;
 }
 
 .thmb {
-    border-radius: 0px;
-    border: none;
-    padding: 30px;
+    padding: 10px;
 }
 
-.glory {
-    font-family: 'Gloria Hallelujah';
+.user {
     font-size: 1.8em;
-    color: white;
     font-weight: 900;
 }
 
 .panel-heading {
-    font-family: 'Gloria Hallelujah';
+    color: white;
     font-size: 2em;
     text-align: center;
     font-weight: bold;
-    text-decoration: underline;
 }
 
 .badge-notify{
@@ -58,31 +65,81 @@ input, select[readonly] {
    font-size: 0.5em;
 }
 
+.icons {
+    color: white;
+}
+
+.well {
+    border: none;
+    background-color: transparent;
+}
+
+.vrt-nv-elm {
+    color: black;
+    cursor: pointer;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+.vert-list {
+
+}
+
+.navbar-brand {
+    padding: 10px;
+}
+
+.text-muted {
+    padding: 0 15px !important;
+}
+
+input, select[readonly] {
+    background-color:white !important;
+}
+
 html, body {
+    background-color: #F69D1F;
     height: 100%;
 }
 
 label {
     font-size: 1.2em;
-    text-decoration: underline;
+    color: orange;
 }
 
 a {
-    color: white;
     font-weight: bold;
 }
 
 p {
+    color: white;
     margin-top: 10px;
 }
 
-nav {
-    border-color: transparent !important;
+#userProfile {
+    border-style: double;
+    border-color: orange;
 }
 
-.well {
+.modal-header, h4, .close {
+    font-weight: bold;
+    color:white ;
+    border-radius: 5px 5px 0px 0px;
+    font-size: 30px;
+}
+
+.orange {
     border: none;
-    background-color: #222;
+    background: rgba(255,146,10,1);
+    background: -moz-linear-gradient(-45deg, rgba(255,146,10,1) 0%, rgba(255,146,10,1) 15%, rgba(255,175,75,1) 55%, rgba(255,146,10,1) 84%, rgba(255,146,10,1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(255,146,10,1)), color-stop(15%, rgba(255,146,10,1)), color-stop(55%, rgba(255,175,75,1)), color-stop(84%, rgba(255,146,10,1)), color-stop(100%, rgba(255,146,10,1)));
+    background: -webkit-linear-gradient(-45deg, rgba(255,146,10,1) 0%, rgba(255,146,10,1) 15%, rgba(255,175,75,1) 55%, rgba(255,146,10,1) 84%, rgba(255,146,10,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(255,146,10,1) 0%, rgba(255,146,10,1) 15%, rgba(255,175,75,1) 55%, rgba(255,146,10,1) 84%, rgba(255,146,10,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(255,146,10,1) 0%, rgba(255,146,10,1) 15%, rgba(255,175,75,1) 55%, rgba(255,146,10,1) 84%, rgba(255,146,10,1) 100%);
+    background: linear-gradient(135deg, rgba(255,146,10,1) 0%, rgba(255,146,10,1) 15%, rgba(255,175,75,1) 55%, rgba(255,146,10,1) 84%, rgba(255,146,10,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff920a', endColorstr='#ff920a', GradientType=1 );
 }
 
 #pic {
@@ -91,4 +148,9 @@ nav {
 
 #logo {
     height: 100%
+}
+
+#pts, #cdts {
+    color: orange;
+    background-color: white;
 }
