@@ -3,6 +3,7 @@
 	Elimina las entradas de este usuario de las tablas, COMENTA, ELIGE, POSTULACION, PUBLICACION, USUARIOS.
 	NO lo elimina si eligio a un usuario y no lo califico.
 	NO lo elimina si fue elegido pero aun no lo calificaron, o sea que no cumplio con la gauchada.
+	NO se fija si tiene o no postulantes.
 	REQUIERE que las tablas  COMENTA, ELIGE y POSTULACION permitan borrado en CASCADA desde la base de datos
 	*********************************************************************************************************/
 
@@ -15,6 +16,9 @@
 	/********************************************/
 	//modificar para recibir el id por parametro
 	$idUser='33';
+
+	//por algo asi
+	//$idUser=$_POST['id'];
 	/*******************************************/
 
 	$email="SELECT email FROM usuarios WHERE idUsuario='$idUser'";

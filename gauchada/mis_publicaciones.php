@@ -78,7 +78,9 @@
                                                 echo"<td width=300><a href=ver_postulantes.php?fila=".$row['idPublicacion'].">POSTULANTES</a></td>";
                                                
                                                 echo"<td id='boton' width=80><a href=?fila=".$row['idPublicacion']." >MODIFICAR</a></td>"; 
-                                                echo"<td id='boton' width='80'> <a onclick='return confirmarCategoria()' ; href=?fila=".$row['idPublicacion'].">ELIMINAR</a>
+
+                                                $idPub =$row['idPublicacion'];
+                                                echo"<td id='boton' width='80'> <a onclick='' ; href=despublicarGauchada.php?idPublicacion=$idPub&idUser=$id fila=".$row['idPublicacion'].">ELIMINAR</a>
                                                 </td></tr>"; 
                                                 }    
     						  }
