@@ -130,7 +130,7 @@ body {background-color: #F69D1F; font-family:'Bree Serif', serif;}
 #favores3  th img{width:20px ; height:20px ;}
 #favores3  td{color:DarkOrange ; height: 100px ; font-size: medium;
               border-bottom: 2px solid DarkOrange; background-color: white; vertical-align: baseline;}
- #favores3  td img{width: 200px;height: 150px}           
+ #favores3  td img{width: auto;height: 150px}           
  #favores3  h4 a{text-decoration: none;
                 color:blue;}
 #favores3 h4 {text-decoration: none;
@@ -611,6 +611,10 @@ GLIPHICONS
 .glyphicon.glyphicon-ok-circle {
     font-size: 50px;
 }
+.glyphicon.glyphicon-ok-circle:hover {
+  color:coral;
+}
+
 .glyphicon.glyphicon-remove-circle {
     font-size: 50px;
 }

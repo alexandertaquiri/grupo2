@@ -47,7 +47,7 @@
  						<tr>
 	       					<th>GAUCHADA</th>
 	       					<th>CIUDAD</th>
-	      				    <th>DESCRIPCION</th>    
+	      				    <th width="500">DESCRIPCION</th>    
 	       					<th>IMAGEN</th>
 							<th>ESTADO</th>
       					</tr>
@@ -95,8 +95,8 @@
 					<?php			}else if($filasEstado != 0 && $filasElegido!= NULL){
 												 echo "Fuiste elegido para esta GAUCHADA <br/>";
 												 ?>
-												 <button type="button" class=botonElegido onClick="location.href='verUsuario.php?id=<?php echo $idUserPub; ?>' " > 
-												 <span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> </button><?php
+												 <button type="button" class=botonElegido onClick="location.href='quienMeElige.php?id=<?php echo $idUserPub; ?>' " > 
+												 <span id="ok" class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> </button><?php
 										}else { echo "No fuiste elegido en esta GAUCHADA <br/>"; 
 											?><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span><?php
 										}

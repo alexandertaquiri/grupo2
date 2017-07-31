@@ -55,6 +55,8 @@
 	       					<th abbr="ciudad" scope="col">CIUDAD</th>
 	      				    <th abbr="foto" scope="col">DESCRIPCIÓN</th>    
 	       					<th abbr="foto" scope="col">FOTO</th>
+	       					<th scope="col"></th>
+	       					<th scope="col"></th>
 	        				
       					</tr>
       					<?php
