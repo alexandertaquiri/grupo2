@@ -32,6 +32,7 @@ $num=mysqli_num_rows($result);
 	<table>
 		<tr>
 			<th>REPUTACION DE GAUCHADA</th>
+			<th>PUNTAJE DE REPUTACION</th>
 	         <th>MODIFICAR</th>
 	         <th>BAJA</th>
 		</tr>
@@ -39,7 +40,8 @@ $num=mysqli_num_rows($result);
 			 $row = mysqli_fetch_array($result);
 		?>
 		<tr>
-		  <td id="titulo" align="center" width="400"><?php echo" $row[categoria]" ?> </td>	
+		  <td id="titulo" align="center" width="400"><?php echo" $row[categoria]" ?> </td>
+		   <td id="titulo" align="center" width="400"><?php echo" $row[puntaje]" ?> </td>		
 	      <td id="boton" > <?php 
 	      echo"<a href=modificar_reputacion.php?categoria=".$row['idReputacion']."&nomcategoria=".$row['categoria']; ?> >MODIFICAR</a>
 

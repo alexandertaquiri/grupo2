@@ -31,7 +31,7 @@
                     
                </select>
                 Ciudad:
-                 <select  name="ciudad">                
+                 <select  name="ciudad" autofocus="autofocus">                
                          <option value="Todos"
                              <?php if(isset($_GET['ciudad'])){
                                       if("Todos"==$_GET['ciudad']){echo "selected=selected"; }} ?> >Todos</option>

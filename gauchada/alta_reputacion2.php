@@ -56,27 +56,38 @@ include("conexion.php");
 
   $result=mysqli_query($con,"SELECT * FROM reputacion WHERE categoria ='$categoria'");//consultar si existe la categoria
   if(mysqli_num_rows($result)==1){//ya existe la categoria;
-      echo '<script> alert("YA EXISTE  LA REPUTACION")</script>';
+      echo '<script> alert("YA EXISTE EL NOMBRE DE LA REPUTACION")</script>';
      
       echo'<script> window.location ="alta_reputacion.php";</script>';
   }
   else{
-      if($result){
-        $query="INSERT INTO reputacion (categoria,puntaje) VALUES('$categoria','$puntaje')";//inserta la nueva categoria de pubñicacion a la tabla categorias
-        $resultado=mysqli_query($con,$query);
-        echo '<script> alert (" LA REPUTACION DE GAUCHADA SE AGREGO CORRECTAMENTE")</script>';
-        //header("location:ver_categorias.php");
-         echo '<script> window.location ="ver_reputaciones.php";</script>';
-      }
-      else{
-        echo '<script> alert ("INTENTE NUEVAMENTE") </script>';
-        echo '<script> window.location ="alta_reputacion.php";</script>';
+        $link=conectar();
+        $resultado=mysqli_query($link,"SELECT * FROM reputacion WHERE puntaje ='$puntaje'");//consultar si existe la categoria
+        //var_dump($resultado);
+        if(mysqli_num_rows($resultado)==1){//ya existe la categoria;
+            echo '<script> alert("YA EXISTE EL PUNTAJE")</script>';
+             echo'<script> window.location ="alta_reputacion.php";</script>';
+  
+         } 
 
-      }
-      mysqli_free_result($resultado);
-      mysqli_close($con);
+        else{ 
+          
+          if($resultado){
+             $query="INSERT INTO reputacion (categoria, puntaje) VALUES('$categoria','$puntaje')";//inserta la nueva categoria de pubñicacion a la tabla categorias
+             $resultado=mysqli_query($con,$query);
+             echo '<script> alert (" LA REPUTACION DE GAUCHADA SE AGREGO CORRECTAMENTE")</script>';
+        //header("location:ver_categorias.php");
+             echo '<script> window.location ="ver_reputaciones.php";</script>';
+          }
+        }
+     
+     //mysqli_free_result($resultado);
+     // mysqli_close($con);
   }
- }
+ } 
+
+  //alta de puntaje aparte
+  
  else {
       //echo '<script> alert ("INTENTE NUEVAMENTE"); </script>';
             echo '<script> window.location ="alta_reputacion.php";</script>';  
@@ -84,4 +95,3 @@ include("conexion.php");
      }  
   
 ?> 
-
