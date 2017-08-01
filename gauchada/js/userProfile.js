@@ -76,4 +76,75 @@
 $(document).ready(function() {	
 	showUserData();
 	showUserPicture();
+
+	$('#editProfile').bootstrapValidator({
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        excluded: [':disabled'],
+        fields: {
+            name: {
+                validators: {
+                    notEmpty: {
+                        message: 'Este campo es obligatorio.'
+                    }
+                }
+            },
+            user: {
+                validators: {
+                    notEmpty: {
+                        message: 'Este campo es obligatorio.'
+                    },	
+                    emailAddress: {
+                    	message: 'Ingrese un mail válido.'
+                    }
+                }
+            },
+            age: {
+                validators: {
+                    notEmpty: {
+                        message: 'Este campo es obligatorio.'
+                    }
+                }
+            },
+            phone: {
+                validators: {
+                    notEmpty: {
+                        message: 'Este campo es obligatorio.'
+                    }
+                }
+            },
+            dni: {
+                validators: {
+                    notEmpty: {
+                        message: 'Este campo es obligatorio.'
+                    },
+                    stringLength: {
+                        message: 'Debe tener 8 dígitos.',
+                        min: 8,
+                        max: 8
+                    }
+                }
+            }
+        }
+    }).on('success.form.bv',function(e) {
+        //e.preventDefault();
+        var formData = new FormData(this);
+        $.ajax({
+            type: 'POST',
+            url: 'submitUserProfile.php',
+            data: formData,
+            async: false,
+            success: function (data) {
+                alert("Sus datos se modificaron exitosamente.");
+                document.location.href = "userProfile.php";
+            },
+            cache: false,
+            contentType: false,   // by default jQuery sets this to urlencoded string
+            processData: false  // do not process the data as url encoded params
+        });
+        return false;
+    });
 });

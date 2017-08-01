@@ -101,7 +101,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="control-label" for="user">Usuario</label>
-                                                    <input id="user2" type="text" name="user2" class="form-control" readonly>
+                                                    <input id="user2" type="email" name="user2" class="form-control" readonly>
                                                 </div>
                                             </div>
                                             <div class="col-md-3 col-md-offset-1">
@@ -191,10 +191,10 @@
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label class="control-label" for="user">Usuario</label>
-                                                            <input id="user" type="text" name="user" class="form-control">
+                                                            <input id="user" type="email" name="user" class="form-control">
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-3">
+                                                    <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label class="control-label" for="dni">DNI</label>
                                                             <input id="dni" type="text" name="dni" class="form-control">
@@ -241,7 +241,7 @@
                                                     <button type="button" class="btn btn-danger btn-block" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancelar </button>
                                                 </div>
                                                 <div class="col-md-3 col-md-offset-2">
-                                                    <button type="submit" class="btn btn-success btn-send btn-block" form="gauchada" value="Submit"><span class="glyphicon glyphicon-ok"></span> Confirmar</button>
+                                                    <button type="submit" class="btn btn-success btn-send btn-block" form="editProfile" value="Submit"><span class="glyphicon glyphicon-ok"></span> Confirmar</button>
                                                     <!-- <input type="submit" class="btn btn-success btn-send" value="Crear Gauchada"> -->
                                                 </div>
                                             </div>

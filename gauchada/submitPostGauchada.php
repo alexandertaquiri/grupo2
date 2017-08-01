@@ -5,9 +5,9 @@
 
     $con = connect();
     $usId = $_SESSION['id'];
-    $res = mysqli_query($con,"SELECT * FROM credito WHERE idUsuario=$usId"); 
+    $res = mysqli_query($con,"SELECT credito FROM usuarios WHERE idUsuario=$usId"); 
     $row = mysqli_fetch_array($res);
-    $am = $row['monto'];
+    $am = $row['credito'];
 
     $title = $_POST['title'];
     $image = addslashes(file_get_contents($_FILES['image']['tmp_name']));
@@ -19,8 +19,10 @@
 
 	mysqli_query($con, "INSERT INTO publicacion (idUsuario, idCategoria, titulo, ciudad, descripcion, caducidad, imagen, tipoimagen) VALUES ('$usId', '$category', '$title', '$city', '$message', '$fcad', '$image', '$imgType')");
 
-    if ($am <= 0) {$am=0;}
-	else {$am=$am-1;}
-    mysqli_query($con,"UPDATE credito SET monto='$am' WHERE idUsuario='$usId'");
+    //if ($am <= 0) {$am=0;}
+	//else {
+        $am=$am-1;
+    //}
+    mysqli_query($con,"UPDATE usuarios SET credito='$am' WHERE idUsuario='$usId'");
 
 ?>
