@@ -33,7 +33,8 @@ $num=mysqli_num_rows($result);
 		<tr>
 			<th>REPUTACION DE GAUCHADA</th>
 			<th>PUNTAJE DE REPUTACION</th>
-	         <th>MODIFICAR</th>
+	         <th>MODIFICAR NOMBRE</th>
+	         <th>MODIFICAR PUNTAJE</th>
 	         <th>BAJA</th>
 		</tr>
 		<?php for ($i=0; $i < $num ; $i++) { 
@@ -43,9 +44,14 @@ $num=mysqli_num_rows($result);
 		  <td id="titulo" align="center" width="400"><?php echo" $row[categoria]" ?> </td>
 		   <td id="titulo" align="center" width="400"><?php echo" $row[puntaje]" ?> </td>		
 	      <td id="boton" > <?php 
-	      echo"<a href=modificar_reputacion.php?categoria=".$row['idReputacion']."&nomcategoria=".$row['categoria']; ?> >MODIFICAR</a>
-
-	      </td>
+	      echo"<a href=modificar_nombre.php?categoria=".$row['idReputacion']."&nomcategoria=".$row['categoria']; ?> >NOMBRE</a>
+          <td id="boton" > <?php 
+          if(($row['idReputacion']==2 )| ($row['idReputacion']==1)){
+	      		  echo"NO SE PUEDE MODIFICAR";
+	      	}
+	      else{	
+	          echo"<a href=modificar_puntaje.php?categoria=".$row['idReputacion']."&puntaje=".$row['puntaje']; echo ">PUNTAJE</a>
+	      </td>";}?>
 	      <td id="boton" > <?php
 	      	if(($row['idReputacion']==2 )| ($row['idReputacion']==1)){
 	      		  echo"NO SE PUEDE ELIMINAR";
