@@ -25,15 +25,15 @@
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a class="white" href="#contact"> <span class="glyphicon glyphicon-comment"><span class="badge badge-notify"></span></a></li>
-                        <li class="dropdown">
+                        <!--<li><a class="white" href="#contact"> <span class="glyphicon glyphicon-comment"><span class="badge badge-notify"></span></a></li>
+                         <li class="dropdown">
                             <a class="dropdown-toggle white" data-toggle="dropdown" href="#"> <span class="glyphicon glyphicon-gift"></span> <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">Ganar puntos</a></li>
                                 <li><a href="#">Extras</a></li> 
                             </ul>
-                        </li>
-                        <li><a class="white" href="salir.php">Salir <span class="glyphicon glyphicon-log-out"></span></a></li>
+                        </li> -->
+                        <li><a class="white" href="salir.php">CERRAR SESIÓN <span class="glyphicon glyphicon-log-out"></span></a></li>
                     </ul>
                 </div>
             </div>
@@ -140,7 +140,7 @@
                     </div>
                 </div>
                 <div class="row col-md-3">
-
+                <input type="hidden" id="mail" value="" >
                 </div>
             </div>
         </div>
@@ -150,7 +150,7 @@
                 <div class="modal-dialog">
                     <!-- Modal content-->
                     <div class="modal-content">
-                        <div class="modal-header orange">
+                        <div class="modal-header orange center-block">
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                             <h4 class="glory"><span class="glyphicon glyphicon-link"></span> DATOS PERSONALES</h4>
                         </div>
@@ -237,13 +237,10 @@
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-md-3 col-md-offset-2">
-                                                    <button type="button" class="btn btn-danger btn-block" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancelar </button>
-                                                </div>
-                                                <div class="col-md-3 col-md-offset-2">
-                                                    <button type="submit" class="btn btn-success btn-send btn-block" form="editProfile" value="Submit"><span class="glyphicon glyphicon-ok"></span> Confirmar</button>
-                                                    <!-- <input type="submit" class="btn btn-success btn-send" value="Crear Gauchada"> -->
-                                                </div>
+                                                  <div class="col-md-4 center-block" style="float: none;">
+                                                      <button type="submit" class="btn btn-success btn-send btn-block" form="editProfile" value="Submit"><span class="glyphicon glyphicon-ok"></span> Publicar</button>
+                                                      <!-- <input type="submit" class="btn btn-success btn-send" value="Crear Gauchada"> -->
+                                                  </div>
                                             </div>
                                             
                                         </div>

@@ -13,4 +13,11 @@
 
     $pts = $pts + $bought;
     mysqli_query($con,"UPDATE usuarios SET credito='$pts' WHERE idUsuario='$usId'");
+
+    date_default_timezone_set("America/New_York");
+    $date = date("Y-m-d");
+    $price = $_POST['price'];
+    //Guardar en el historial de compras.
+    mysqli_query($con, "INSERT INTO compra (idUsuario, fecha, credito, monto) VALUES ('$usId', '$date', '$bought', '$price')");
+
 ?>

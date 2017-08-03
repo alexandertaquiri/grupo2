@@ -1,10 +1,12 @@
-	function showUserData() {	
+
+
+    function showUserData() {	
 		$.ajax({
 	        type: "POST",
 	        url: "getUser.php",
 	        success: function(response) {
 	        	var usuarios = JSON.parse(response);
-	        	$("#usr2").html(usuarios[0]);
+	        	$("#usr").html(usuarios[0]);
 
 	        	$("#name2").attr("value", usuarios[0]);
 	        	$("#lastname2").attr("value", usuarios[1]);
@@ -18,6 +20,7 @@
 	        	$("#user2").attr("value", usuarios[6]);
 	        	$("#pts").html(usuarios[7]);
 	        	$("#cdts").html(usuarios[9]);
+                $("#mail").attr("value", usuarios[6]);
 	        }
 	    });
 	}
@@ -77,7 +80,25 @@ $(document).ready(function() {
 	showUserData();
 	showUserPicture();
 
+    $("#user").on("change", function(){
+        var mail = $("#user").val();
+        $.ajax({
+            type: "POST",
+            url: "getOtherUsers.php",
+            success: function(response) {
+                var usuarios = JSON.parse(response);
+                for(var i in usuarios) {                    
+                    if ( mail == usuarios[i].email.toString()) {
+                        alert("Este email no está disponible.");
+                        break;
+                    }
+                }
+            }
+        });
+    });
+
 	$('#editProfile').bootstrapValidator({
+        //var user = $("#mail").attr("value");
         feedbackIcons: {
             valid: 'glyphicon glyphicon-ok',
             invalid: 'glyphicon glyphicon-remove',
@@ -130,7 +151,7 @@ $(document).ready(function() {
             }
         }
     }).on('success.form.bv',function(e) {
-        //e.preventDefault();
+        e.preventDefault();
         var formData = new FormData(this);
         $.ajax({
             type: 'POST',

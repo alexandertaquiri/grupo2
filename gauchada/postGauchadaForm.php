@@ -112,13 +112,13 @@
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-md-3 col-md-offset-2">
-                                                    <button type="button" class="btn btn-danger btn-block" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancelar </button>
-                                                </div>
-                                                <div class="col-md-3 col-md-offset-2">
-                                                    <button type="submit" class="btn btn-success btn-send btn-block" form="gauchada" value="Submit"><span class="glyphicon glyphicon-ok"></span> Confirmar</button>
-                                                    <!-- <input type="submit" class="btn btn-success btn-send" value="Crear Gauchada"> -->
-                                                </div>
+        <!--                                           <div class="col-md-3 col-md-offset-2">
+                                                      <button type="button" class="btn btn-danger btn-block" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancelar </button>
+                                                  </div> -->
+                                                  <div class="col-md-4 center-block">
+                                                      <button type="submit" class="btn btn-success btn-send btn-block" form="gauchada" value="Submit"><span class="glyphicon glyphicon-ok"></span> Publicar</button>
+                                                      <!-- <input type="submit" class="btn btn-success btn-send" value="Crear Gauchada"> -->
+                                                  </div>
                                             </div>
                                             
                                         </div>

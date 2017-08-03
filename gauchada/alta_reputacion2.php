@@ -66,7 +66,7 @@ include("conexion.php");
         //var_dump($resultado);
         if(mysqli_num_rows($resultado)==1){//ya existe la categoria;
             echo '<script> alert("YA EXISTE EL PUNTAJE")</script>';
-             echo'<script> window.location ="alta_reputacion.php";</script>';
+            echo'<script> window.location ="alta_reputacion.php";</script>';
   
          } 
 

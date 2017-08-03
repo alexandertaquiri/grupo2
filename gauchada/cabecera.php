@@ -102,9 +102,10 @@
          
 
 	</div>
-	<script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/bootstrapValidator.min.js"></script>
-    <script src="js/postGauchadaForm.js"></script>
+	  <!-- JQuery & Bootstrap Validator JS-->
+	  <script src="js/jquery.js"></script>
+	  <script src="js/bootstrap.min.js"></script>
+	  <script src="js/bootstrapValidator.min.js"></script>
+	<script src="js/PostGauchadaForm.js"></script>
 </body>
 </html>

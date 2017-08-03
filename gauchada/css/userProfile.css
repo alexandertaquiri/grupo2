@@ -75,7 +75,7 @@
 }
 
 .vrt-nv-elm {
-    color: black;
+    color: white;
     cursor: pointer;
 }
 
@@ -130,7 +130,7 @@ p {
     font-size: 30px;
 }
 
-.orange {
+.orange, .btn-success {
     border: none;
     background: rgba(255,146,10,1);
     background: -moz-linear-gradient(-45deg, rgba(255,146,10,1) 0%, rgba(255,146,10,1) 15%, rgba(255,175,75,1) 55%, rgba(255,146,10,1) 84%, rgba(255,146,10,1) 100%);

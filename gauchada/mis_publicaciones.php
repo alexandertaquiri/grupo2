@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Gauchada</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
 </head>
 <body>
+<div class="container-fluid">
 	<?php
 	      include("cabecera.php");
       	include("clases.php");
@@ -19,8 +22,8 @@
       	
       	?>
 
-      	<div id="container">
-		<div id="favores2">
+      	
+		<div id="favores2" >
 		
 			<?php
 				
@@ -32,7 +35,7 @@
                         else{
 				?>
 					<table >
- 						<tr>
+ 						<tr >
 	       					<th abbr="titulo" scope="col">TITULO</th>
 	       					<th abbr="ciudad" scope="col">CIUDAD</th>
 	      				    <th abbr="foto" scope="col">DESCRIPCION</th>    
@@ -43,7 +46,7 @@
 	        				
       					</tr>
       					<?php
-                                          echo"<h4>MIS PUBLICACIONES</h4>";
+                                          echo"<h3>MIS PUBLICACIONES</h3>";
       						for($x = 1; $x <=$num ; $x++){
       							$row = mysqli_fetch_array($result);
       							
@@ -76,22 +79,21 @@
                                                       } 
                                                 else {        
                                                 echo"<td width=300><a href=ver_postulantes.php?fila=".$row['idPublicacion'].">POSTULANTES</a></td>";
-                                               
-                                                echo"<td id='boton' width=80><a href=?fila=".$row['idPublicacion']." >MODIFICAR</a></td>"; 
-
                                                 $idPub =$row['idPublicacion'];
+                                                echo"<td id='boton' width=80><a href=editGauchada.php?id=".$idPub.">MODIFICAR</a></td>"; 
+
                                                 echo"<td id='boton' width='80'> <a onclick='' ; href=despublicarGauchada.php?idPublicacion=$idPub&idUser=$id fila=".$row['idPublicacion'].">ELIMINAR</a>
                                                 </td></tr>"; 
                                                 }    
     						  }
       					}
+                        
       					?>
       					
       				</table>	
 		
 		</div>
-		
-      
-	</div>	
+	</div>
+
 </body>
 </html>

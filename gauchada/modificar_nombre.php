@@ -44,7 +44,7 @@ $num=mysqli_num_rows($result);
                             <input type="hidden" name="nombre2" value='<?php echo "$row[categoria]"; ?>'></br>  
                             <label for="nombre">Nombre de la Reputacion:</label>
                             <input type="text" name="nombre" class="input username"  required="required" size="25"
-                             value=<?php echo"$row[categoria]";?>></br></br>
+                             value="<?php echo htmlspecialchars($row['categoria'])?>"></br></br>
                            
                     </div>
                     <div class="footer">
