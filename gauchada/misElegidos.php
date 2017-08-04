@@ -59,7 +59,7 @@
 	        				
       					</tr>
       					<?php
-							echo"<h4>CALIFICACIONES</h4>";
+							echo"<h3 id=titular>MIS CALIFICACIONES DADAS</h3>";
       						for($x = 1; $x <=$num ; $x++){
 								
       							$row = mysqli_fetch_array($resx);

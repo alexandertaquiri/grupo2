@@ -3,7 +3,7 @@
 body {background-color: #F69D1F; font-family:'Bree Serif', serif;}
 #logosan {width:80%; height: 30%; float: center;}
 #inicio{width: 25px;height:25px;}
-
+#titular {color: DarkOrange;}
 #header {width: 100%}
 
 #header h3 a {color:white; font-size:large; 

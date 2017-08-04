@@ -42,7 +42,7 @@
 					echo"<h4>NO SE ENCONTRARON RESULTADOS</h4>";
 				}
 				else{
-						echo"<h4>HISTORIAL DE CALIFICACIONES</h4>";
+						echo"<h3 id=titular>MIS CALIFICACIONES RECIBIDAS</h3>";
 					?>
 						<table class="table">
  						<tr>

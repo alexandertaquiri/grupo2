@@ -41,7 +41,7 @@
 					echo"<h4>NO SE ENCONTRARON RESULTADOS</h4>";
 				}
 				else{
-						echo"<h4>MIS GAUCHADAS FAVORITAS</h4>";
+						echo"<h3 id=titular>MIS GAUCHADAS FAVORITAS</h3>";
 						?>
 						<table class="table" >
  						<tr>

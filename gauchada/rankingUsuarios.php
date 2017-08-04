@@ -16,10 +16,10 @@
 	</head>
 	<body>
 	<table class="table">
-	<?php echo "<h4>TOP 10 MEJORES GAUCHOS</h4>"; ?>
+	<?php echo "<h3 id=titular>TOP 10 MEJORES GAUCHOS</h3>"; ?>
 	 	<tr>
+			<th>USUARIO</th>
 			<th>NOMBRE</th>
-			<th>APELLIDO</th>
 		    <th>PUNTAJE</th>
 		    <th>REPUTACION</th>
 		    <th>FOTO</th>
@@ -27,7 +27,7 @@
 
 		<?php
 
-			$topTen="SELECT nombre, apellido, puntos, rol, foto, idUsuario
+			$topTen="SELECT email, nombre, apellido, puntos, rol, foto, idUsuario
 					FROM usuarios
 					ORDER BY puntos DESC";
 
@@ -41,11 +41,12 @@
 				while($i<=10 and $ok){
 					$fila=mysqli_fetch_array($topTen);
 					if($fila!=NULL){
+						$nom = $fila['nombre'] ." ". $fila['apellido'];
 						//si no es administrador
 						if($fila['rol']==0){
 							?> <tr>
-								<td> <?php echo $fila['nombre']; ?> </td>
-								<td> <?php echo $fila['apellido']; ?> </td>
+								<td> <?php echo $fila['email']; ?> </td>
+								<td> <?php echo $nom ?> </td>
 								<td> <?php echo $fila['puntos']; ?> </td>
 								<td> <?php echo verReputacion($fila['idUsuario'], $link); ?> </td>
 								<td> <?php echo"<img src=";

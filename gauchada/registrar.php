@@ -50,10 +50,10 @@
 					<input type="email" name="email" class="input username" size=30 required="required">
 					
 					<label for="password">Contraseña: </br></label>
-					<input type="password" name="password1" size=8 minlength="6" maxlength="6" class="input password" required="required">
+					<input type="password" name="password1" size=20 minlength="6" maxlength="20" class="input password" required="required">
 					
 					<label for="password" >Confirme contraseña: </br></label>
-					<input type="password" name="password2" minlength="6" size="8" maxlength="6" class="input password" required="required">	
+					<input type="password" name="password2" minlength="6" size="20" maxlength="20" class="input password" required="required">	
 					
 					<label for="imagen">Subir foto (opcional) </br></label>
 					<input type="file" name="imagen">
