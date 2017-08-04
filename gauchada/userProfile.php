@@ -55,9 +55,11 @@
                         <div class="col-md-12">
                             <ul class="nav navbar-nav vert-list">
                                 <li class="col-md-12 edit"><a class="vrt-nv-elm"><span class="glyphicon glyphicon-pencil icons"></span> Editar perfil</a></li>
+                                <li class="col-md-12"><a class="vrt-nv-elm" id="chgpwd" data-toggle="modal" data-target="#passModal"><span class="glyphicon glyphicon-lock icons"></span> Cambiar contraseña</a></li>
                                 <li class="col-md-12"><a class="vrt-nv-elm" href="mis_publicaciones.php"><span class="glyphicon glyphicon-tasks icons"></span> Mis publicaciones</a></li>
                                 <li class="col-md-12"><a class="vrt-nv-elm"><span class="glyphicon glyphicon-star icons"></span> Puntos <span id="pts" class="badge"></span></a></li>
                                 <li class="col-md-12"><a class="vrt-nv-elm"><span class="glyphicon glyphicon-check icons"></span> Créditos <span id="cdts" class="badge"></span></a></li>
+                                <li class="col-md-12 edit"><a href="eliminarCuenta.php" class="vrt-nv-elm"><span class="glyphicon glyphicon-remove icons"></span> Eliminar cuenta</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -252,10 +254,60 @@
                 </div>
             </div>
         </div>
+
+        <div class="container">
+            <div class="modal fade" id="passModal" data-backdrop="static" data-keyboard="false" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header orange center-block">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="glory"><span class="glyphicon glyphicon-lock"></span> Contraseña</h4>
+                        </div>
+                        <div class="modal-body bg-body">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <form id="chgpwd" method="POST" enctype="multipart/form-data">
+                                        <div class="controls">
+                                            <div class="row">
+                                                
+                                                    <div class="col-md-6 ">
+                                                        <div class="form-group">
+                                                            <label class="control-label" for="pwd">Nueva contraseña</label>
+                                                            <input id="pwd" type="password" name="pwd" class="form-control">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6 ">
+                                                        <div class="form-group">
+                                                            <label class="control-label" for="pwd2">Repita la contraseña</label>
+                                                            <input id="pwd2" type="password" name="pwd2" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                
+                                            </div>
+                                            
+                                            <div class="row">
+                                                  <div class="col-md-4 center-block" style="float: none;">
+                                                      <button id="btn-sub" type="submit" class="btn btn-success btn-send btn-block" form="chgpwd" value="Submit"><span class="glyphicon glyphicon-ok"></span> Publicar</button>
+                                                      <!-- <input type="submit" class="btn btn-success btn-send" value="Crear Gauchada"> -->
+                                                  </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
             <!-- JQuery & Bootstrap Validator JS-->
         <script src="js/jquery.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/bootstrapValidator.min.js"></script>
         <script src="js/userProfile.js"></script>
+        <script src="js/changepwd.js"></script>
     </body>
 </html>

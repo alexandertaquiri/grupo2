@@ -15,7 +15,7 @@
 	
 	/********************************************/
 	//modificar para recibir el id por parametro
-	$idUser='33';
+	$idUser=$_SESSION['id'];
 
 	//por algo asi
 	//$idUser=$_POST['id'];
