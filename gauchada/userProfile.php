@@ -142,7 +142,14 @@
                     </div>
                 </div>
                 <div class="row col-md-3">
-                <input type="hidden" id="mail" value="" >
+   <!--                  <div class="panel panel-default ">
+                        <div class="panel-body">
+                            <div class="panel-heading orange">Mi reputación</div>
+                            <div>
+                                <h3></h3>
+                            </div>
+                        </div>
+                    </div> -->
                 </div>
             </div>
         </div>

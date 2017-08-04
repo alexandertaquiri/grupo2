@@ -79,7 +79,7 @@
 $(document).ready(function() {	
 	showUserData();
 	showUserPicture();
-
+    showUserReputation();
     $("#user").on("change", function(){
         var mail = $("#user").val();
         $.ajax({
@@ -171,3 +171,20 @@ $(document).ready(function() {
 
 
 });
+
+    // function showUserReputation() {
+    //     var pts = $("#poi").attr("value");
+    //     alert(pts);
+    //     $.ajax({
+    //         type: "POST",
+    //         url: "getReputations.php",
+    //         success: function(response) {
+    //             var reps = JSON.parse(response);
+    //             for(var i in reps) {                    
+    //                 if ( pts < reps[i].puntaje) {
+    //                     alert(reps[i].puntaje);
+    //                 }
+    //             }
+    //         }
+    //     });
+    // }
