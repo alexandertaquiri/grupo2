@@ -41,7 +41,7 @@
 					echo"<h4>NO SE ENCONTRARON RESULTADOS</h4>";
 				}
 				else{
-						echo"<h4>GAUCHADAS A LAS QUE ME POSTULÉ</h4>";
+						echo"<h3 id=titular>GAUCHADAS A LAS QUE ME POSTULÉ</h3>";
 						?>
 						<table class="table" >
  						<tr>

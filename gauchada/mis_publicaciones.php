@@ -29,7 +29,7 @@
 				
 				$num=mysqli_num_rows($result);
 				if($num == 0){//no se dibuja la tabla y me da como resultado este mensaje
-					echo"<h4>NO SE ENCONTRARON RESULTADOS</h4>";
+					echo"<h3>NO SE ENCONTRARON RESULTADOS</h3>";
 				}
 				
                         else{
@@ -46,7 +46,7 @@
 	        				
       					</tr>
       					<?php
-                                          echo"<h3>MIS PUBLICACIONES</h3>";
+                                          echo"<h3 id=titular>MIS PUBLICACIONES</h3>";
       						for($x = 1; $x <=$num ; $x++){
       							$row = mysqli_fetch_array($result);
       							
